@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${customer.name})}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('customers')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar(${customer.name}, 'Customer ' + ${customer.id})}"></header>
+        <section class="content">
+            <a class="back" th:href="@{/customers}">← All customers</a>
+
+            <div class="card profile">
+                <div class="avatar" th:text="${#strings.substring(customer.name, 0, 1)}">A</div>
+                <dl class="facts">
+                    <div><dt>Customer id</dt><dd class="mono" th:text="${customer.id}"></dd></div>
+                    <div><dt>Email</dt><dd><a th:href="|mailto:${customer.email}|" th:text="${customer.email}"></a></dd></div>
+                    <div><dt>Phone</dt><dd th:text="${customer.phone}"></dd></div>
+                    <div><dt>Preferred channel</dt><dd><span th:replace="~{fragments/layout :: badge(${customer.preferredChannel})}"></span></dd></div>
+                    <div><dt>Language</dt><dd th:text="${#strings.toUpperCase(customer.language)}"></dd></div>
+                    <div><dt>Tier</dt><dd><span th:replace="~{fragments/layout :: badge(${customer.tier})}"></span></dd></div>
+                </dl>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Orders</h2><span class="count" th:text="${#lists.size(orders)}"></span></div>
+                <table class="table" th:unless="${#lists.isEmpty(orders)}">
+                    <thead><tr><th>Order</th><th>Ordered</th><th>Items</th><th>Status</th><th class="num">Total</th></tr></thead>
+                    <tbody>
+                    <tr th:each="order : ${orders}">
+                        <td><a class="mono strong" th:href="@{/orders/{id}(id=${order.id})}" th:text="${order.id}"></a></td>
+                        <td th:text="${#temporals.format(order.orderDate, 'd MMM yyyy')}"></td>
+                        <td class="muted"><span th:each="item, it : ${order.items}" th:text="${item.summary()} + (${it.last} ? '' : ', ')"></span></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${order.status})}"></span></td>
+                        <td class="num" th:text="|${#numbers.formatDecimal(order.total, 1, 'COMMA', 2, 'POINT')} ${order.currency}|"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="empty" th:if="${#lists.isEmpty(orders)}">This customer has no orders.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Notifications</h2><span class="count" th:text="${#lists.size(notifications)}"></span></div>
+                <ul class="feed" th:unless="${#lists.isEmpty(notifications)}">
+                    <li th:each="n : ${notifications}">
+                        <div class="feed-meta">
+                            <span th:replace="~{fragments/layout :: badge(${n.channel})}"></span>
+                            <span class="muted" th:text="${n.recipient}"></span>
+                            <time class="muted" th:text="${#temporals.format(n.sentAt, 'd MMM yyyy, HH:mm')}"></time>
+                        </div>
+                        <p class="feed-text" th:text="${n.message}"></p>
+                    </li>
+                </ul>
+                <p class="empty" th:if="${#lists.isEmpty(notifications)}">No messages were sent to this customer yet.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+</body>
+</html>

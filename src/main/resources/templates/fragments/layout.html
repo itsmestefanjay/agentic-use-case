@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="|${title} · Order Support|">Order Support</title>
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+    <link rel="stylesheet" th:href="@{/css/console.css}">
+</head>
+
+<body>
+
+<aside th:fragment="sidebar(active)" class="sidebar">
+    <a class="brand" th:href="@{/}">
+        <span class="brand-mark"></span>
+        <span>Order Support</span>
+    </a>
+    <nav class="nav">
+        <a th:href="@{/}" th:classappend="${active == 'dashboard'} ? 'active'">
+            <svg viewBox="0 0 24 24"><path d="M4 13h7V4H4zm0 7h7v-5H4zm9 0h7v-9h-7zm0-16v5h7V4z"/></svg>Dashboard</a>
+        <a th:href="@{/customers}" th:classappend="${active == 'customers'} ? 'active'">
+            <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4m-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3m0 2c-2.3 0-7 1.2-7 3.5V19h7v-2.5c0-.9.4-1.8 1-2.5a10 10 0 0 0-1-1m8 0c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4"/></svg>Customers</a>
+        <a th:href="@{/orders}" th:classappend="${active == 'orders'} ? 'active'">
+            <svg viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5zM12 5.3 17.6 8.4 12 11.5 6.4 8.4zM5 10.1l6 3.3v5.1l-6-3.3zm8 8.4v-5.1l6-3.3v5.1z"/></svg>Orders</a>
+        <a th:href="@{/notifications}" th:classappend="${active == 'notifications'} ? 'active'">
+            <svg viewBox="0 0 24 24"><path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2m6-6V11c0-3.1-1.6-5.6-4.5-6.3V4a1.5 1.5 0 0 0-3 0v.7C7.6 5.4 6 7.9 6 11v5l-2 2v1h16v-1z"/></svg>Notifications</a>
+    </nav>
+    <div class="sidebar-foot">Mock data · in-memory H2<br>Reset on every restart</div>
+</aside>
+
+<header th:fragment="topbar(title, subtitle)" class="topbar">
+    <div>
+        <h1 th:text="${title}">Title</h1>
+        <p class="subtitle" th:if="${subtitle != null}" th:text="${subtitle}"></p>
+    </div>
+    <form class="search" th:action="@{/search}" method="get" role="search">
+        <svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 3.5 10.9l4.3 4.3 1.4-1.4-4.3-4.3A6 6 0 0 0 10 4m0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8"/></svg>
+        <input type="search" name="q" placeholder="Order id, customer id, name, email or tracking number" autocomplete="off">
+        <kbd>/</kbd>
+    </form>
+</header>
+
+<span th:fragment="badge(value)" th:if="${value != null}" class="badge"
+      th:classappend="|badge-${value}|" th:text="${#strings.replace(#strings.toString(value), '_', ' ')}">STATUS</span>
+
+<script th:fragment="shortcuts">
+    document.addEventListener('keydown', event => {
+        const input = document.querySelector('.search input');
+        if (event.key === '/' && document.activeElement !== input) {
+            event.preventDefault();
+            input.focus();
+        }
+    });
+</script>
+
+</body>
+</html>

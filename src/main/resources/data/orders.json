@@ -1,0 +1,2093 @@
+[
+  {
+    "id": "ORD-10001", "customerId": "C-1001", "orderedDaysAgo": 21, "status": "DELIVERED", "statusUpdatedHoursAgo": 408,
+    "currency": "SEK", "shippingCity": "Stockholm", "shippingCountry": "SE",
+    "items": [
+      { "sku": "HP-200", "name": "Noise Cancelling Headphones", "quantity": 1, "unitPrice": 2499.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0001234567801", "shippedHoursAgo": 456, "estimatedDeliveryInHours": -410, "deliveredHoursAgo": 408,
+      "events": [
+        { "hoursAgo": 456, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 430, "location": "Stockholm", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 408, "location": "Stockholm", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10002", "customerId": "C-1001", "orderedDaysAgo": 4, "status": "SHIPPED", "statusUpdatedHoursAgo": 50,
+    "currency": "SEK", "shippingCity": "Stockholm", "shippingCountry": "SE",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 1290.00 },
+      { "sku": "MS-120", "name": "Wireless Mouse", "quantity": 1, "unitPrice": 449.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0001234567802", "shippedHoursAgo": 50, "estimatedDeliveryInHours": 22,
+      "events": [
+        { "hoursAgo": 50, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 30, "location": "Jönköping", "description": "In transit" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10003", "customerId": "C-1001", "orderedDaysAgo": 1, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 6,
+    "currency": "SEK", "shippingCity": "Stockholm", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 3, "unitPrice": 129.00 }
+    ]
+  },
+  {
+    "id": "ORD-10004", "customerId": "C-1002", "orderedDaysAgo": 3, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 3,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 349.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01505012345601", "shippedHoursAgo": 40, "estimatedDeliveryInHours": 5,
+      "events": [
+        { "hoursAgo": 40, "location": "Nürnberg", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 20, "location": "Hamburg", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 3, "location": "Hamburg", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10005", "customerId": "C-1003", "orderedDaysAgo": 6, "status": "SHIPPED", "statusUpdatedHoursAgo": 100,
+    "currency": "SEK", "shippingCity": "Göteborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "LMP-40", "name": "Desk Lamp", "quantity": 1, "unitPrice": 599.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370730253498765", "shippedHoursAgo": 100, "estimatedDeliveryInHours": 30,
+      "events": [
+        { "hoursAgo": 100, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 60, "location": "Göteborg", "description": "Arrived at sorting terminal" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10006", "customerId": "C-1003", "orderedDaysAgo": 6, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 120,
+    "currency": "SEK", "shippingCity": "Göteborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CH-500", "name": "Ergonomic Office Chair", "quantity": 1, "unitPrice": 3990.00 }
+    ]
+  },
+  {
+    "id": "ORD-10007", "customerId": "C-1004", "orderedDaysAgo": 10, "status": "CANCELLED", "statusUpdatedHoursAgo": 230,
+    "currency": "EUR", "shippingCity": "Köln", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 1, "unitPrice": 429.00 }
+    ]
+  },
+  {
+    "id": "ORD-10008", "customerId": "C-1004", "orderedDaysAgo": 2, "status": "CONFIRMED", "statusUpdatedHoursAgo": 44,
+    "currency": "EUR", "shippingCity": "Köln", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 },
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 1, "unitPrice": 429.00 }
+    ]
+  },
+  {
+    "id": "ORD-10009", "customerId": "C-1005", "orderedDaysAgo": 0, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 1,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 2, "unitPrice": 79.00 }
+    ]
+  },
+  {
+    "id": "ORD-10010", "customerId": "C-1005", "orderedDaysAgo": 14, "status": "DELIVERED", "statusUpdatedHoursAgo": 260,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BK-101", "name": "Cookbook", "quantity": 1, "unitPrice": 24.99 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "ZT41H7K2", "shippedHoursAgo": 310, "estimatedDeliveryInHours": -262, "deliveredHoursAgo": 260,
+      "events": [
+        { "hoursAgo": 310, "location": "Leipzig", "description": "Parcel registered" },
+        { "hoursAgo": 260, "location": "Berlin", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10011", "customerId": "C-1006", "orderedDaysAgo": 5, "status": "ON_HOLD", "statusUpdatedHoursAgo": 96,
+    "currency": "SEK", "shippingCity": "Uppsala", "shippingCountry": "SE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 1, "unitPrice": 3290.00 }
+    ]
+  },
+  {
+    "id": "ORD-10012", "customerId": "C-1007", "orderedDaysAgo": 30, "status": "RETURNED", "statusUpdatedHoursAgo": 400,
+    "currency": "EUR", "shippingCity": "München", "shippingCountry": "DE",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 1, "unitPrice": 149.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA10123456784", "shippedHoursAgo": 690, "estimatedDeliveryInHours": -630, "deliveredHoursAgo": 626,
+      "events": [
+        { "hoursAgo": 690, "location": "Frankfurt", "description": "Origin scan" },
+        { "hoursAgo": 626, "location": "München", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10013", "customerId": "C-1007", "orderedDaysAgo": 8, "status": "SHIPPED", "statusUpdatedHoursAgo": 150,
+    "currency": "EUR", "shippingCity": "München", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 189.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA10123456785", "shippedHoursAgo": 150, "estimatedDeliveryInHours": -30,
+      "events": [
+        { "hoursAgo": 150, "location": "Frankfurt", "description": "Origin scan" },
+        { "hoursAgo": 90, "location": "Nürnberg", "description": "Departure scan" },
+        { "hoursAgo": 40, "location": "Nürnberg", "description": "Delayed due to severe weather" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10014", "customerId": "C-1009", "orderedDaysAgo": 7, "status": "DELIVERED", "statusUpdatedHoursAgo": 110,
+    "currency": "EUR", "shippingCity": "Düsseldorf", "shippingCountry": "DE",
+    "items": [
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 1, "unitPrice": 34.50 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0001234567814", "shippedHoursAgo": 150, "estimatedDeliveryInHours": -112, "deliveredHoursAgo": 110,
+      "events": [
+        { "hoursAgo": 150, "location": "Bochum", "description": "Shipment picked up" },
+        { "hoursAgo": 110, "location": "Düsseldorf", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10015", "customerId": "C-1009", "orderedDaysAgo": 2, "status": "SHIPPED", "statusUpdatedHoursAgo": 20,
+    "currency": "EUR", "shippingCity": "Düsseldorf", "shippingCountry": "DE",
+    "items": [
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 1, "unitPrice": 59.00 },
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 4, "unitPrice": 9.90 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0001234567815", "shippedHoursAgo": 20, "estimatedDeliveryInHours": 28,
+      "events": [
+        { "hoursAgo": 20, "location": "Bochum", "description": "Shipment picked up" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10016", "customerId": "C-1010", "orderedDaysAgo": 45, "status": "DELIVERED", "statusUpdatedHoursAgo": 1030,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 1, "unitPrice": 899.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370730253498716", "shippedHoursAgo": 1060, "estimatedDeliveryInHours": -1032, "deliveredHoursAgo": 1030,
+      "events": [
+        { "hoursAgo": 1060, "location": "Malmö", "description": "Item received by PostNord" },
+        { "hoursAgo": 1030, "location": "Lund", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10017", "customerId": "C-1010", "orderedDaysAgo": 12, "status": "DELIVERED", "statusUpdatedHoursAgo": 220,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 2, "unitPrice": 199.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370730253498717", "shippedHoursAgo": 260, "estimatedDeliveryInHours": -222, "deliveredHoursAgo": 220,
+      "events": [
+        { "hoursAgo": 260, "location": "Malmö", "description": "Item received by PostNord" },
+        { "hoursAgo": 220, "location": "Lund", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10018", "customerId": "C-1010", "orderedDaysAgo": 3, "status": "SHIPPED", "statusUpdatedHoursAgo": 30,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 2490.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA10123456718", "shippedHoursAgo": 30, "estimatedDeliveryInHours": 18,
+      "events": [
+        { "hoursAgo": 30, "location": "Göteborg", "description": "Origin scan" },
+        { "hoursAgo": 12, "location": "Malmö", "description": "Arrival scan" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10019", "customerId": "C-1010", "orderedDaysAgo": 1, "status": "CONFIRMED", "statusUpdatedHoursAgo": 20,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SB-10", "name": "Sleeping Bag", "quantity": 1, "unitPrice": 1190.00 }
+    ]
+  },
+  {
+    "id": "ORD-10020", "customerId": "C-1002", "orderedDaysAgo": 25, "status": "DELIVERED", "statusUpdatedHoursAgo": 540,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 89.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01505012345620", "shippedHoursAgo": 580, "estimatedDeliveryInHours": -545, "deliveredHoursAgo": 540,
+      "events": [
+        { "hoursAgo": 580, "location": "Nürnberg", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 540, "location": "Hamburg", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10021", "customerId": "C-1008", "orderedDaysAgo": 68, "status": "RETURNED", "statusUpdatedHoursAgo": 1349,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "LMP-40", "name": "Desk Lamp", "quantity": 3, "unitPrice": 599.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00378265621947164", "shippedHoursAgo": 1624, "estimatedDeliveryInHours": -1543, "deliveredHoursAgo": 1553,
+      "events": [
+        { "hoursAgo": 1624, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 1610, "location": "Malmö", "description": "In transit" },
+        { "hoursAgo": 1559, "location": "Helsingborg", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1556, "location": "Malmö", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1553, "location": "Örebro", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10022", "customerId": "C-1008", "orderedDaysAgo": 10, "status": "ON_HOLD", "statusUpdatedHoursAgo": 168,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 1, "unitPrice": 899.00 }
+    ]
+  },
+  {
+    "id": "ORD-10023", "customerId": "C-1011", "orderedDaysAgo": 83, "status": "RETURNED", "statusUpdatedHoursAgo": 1642,
+    "currency": "SEK", "shippingCity": "Uppsala", "shippingCountry": "SE",
+    "items": [
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 1390.00 },
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 1, "unitPrice": 899.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD6617068860208", "shippedHoursAgo": 1935, "estimatedDeliveryInHours": -1845, "deliveredHoursAgo": 1859,
+      "events": [
+        { "hoursAgo": 1935, "location": "Jönköping", "description": "Shipment picked up" },
+        { "hoursAgo": 1919, "location": "Malmö", "description": "In transit" },
+        { "hoursAgo": 1915, "location": "Göteborg", "description": "Departure scan" },
+        { "hoursAgo": 1890, "location": "Uppsala", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1859, "location": "Uppsala", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10024", "customerId": "C-1011", "orderedDaysAgo": 80, "status": "DELIVERED", "statusUpdatedHoursAgo": 1812,
+    "currency": "SEK", "shippingCity": "Uppsala", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 3, "unitPrice": 790.00 },
+      { "sku": "BK-102", "name": "Paperback Novel", "quantity": 1, "unitPrice": 149.00 },
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 4, "unitPrice": 399.00 },
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 2190.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00372052028640146", "shippedHoursAgo": 1880, "estimatedDeliveryInHours": -1796, "deliveredHoursAgo": 1812,
+      "events": [
+        { "hoursAgo": 1880, "location": "Jönköping", "description": "Item received by PostNord" },
+        { "hoursAgo": 1876, "location": "Stockholm", "description": "In transit" },
+        { "hoursAgo": 1845, "location": "Stockholm", "description": "In transit" },
+        { "hoursAgo": 1824, "location": "Uppsala", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 1812, "location": "Uppsala", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10025", "customerId": "C-1011", "orderedDaysAgo": 77, "status": "DELIVERED", "statusUpdatedHoursAgo": 1762,
+    "currency": "SEK", "shippingCity": "Uppsala", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 1, "unitPrice": 790.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA19829125863", "shippedHoursAgo": 1808, "estimatedDeliveryInHours": -1765, "deliveredHoursAgo": 1762,
+      "events": [
+        { "hoursAgo": 1808, "location": "Helsingborg", "description": "Origin scan" },
+        { "hoursAgo": 1807, "location": "Örebro", "description": "In transit" },
+        { "hoursAgo": 1783, "location": "Stockholm", "description": "Departure scan" },
+        { "hoursAgo": 1779, "location": "Uppsala", "description": "Arrival scan" },
+        { "hoursAgo": 1762, "location": "Uppsala", "description": "Delivered, left at front door" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10026", "customerId": "C-1012", "orderedDaysAgo": 50, "status": "CANCELLED", "statusUpdatedHoursAgo": 1122,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 89.00 }
+    ]
+  },
+  {
+    "id": "ORD-10027", "customerId": "C-1012", "orderedDaysAgo": 7, "status": "SHIPPED", "statusUpdatedHoursAgo": 82,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 3, "unitPrice": 429.00 },
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 1, "unitPrice": 24.50 },
+      { "sku": "YM-10", "name": "Yoga Mat", "quantity": 2, "unitPrice": 29.90 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "896L4LT4", "shippedHoursAgo": 82, "estimatedDeliveryInHours": 34,
+      "events": [
+        { "hoursAgo": 82, "location": "Leipzig", "description": "Parcel registered" },
+        { "hoursAgo": 49, "location": "Nürnberg", "description": "In transit" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10028", "customerId": "C-1012", "orderedDaysAgo": 6, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 6,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 349.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD5734300441870", "shippedHoursAgo": 61, "estimatedDeliveryInHours": 6,
+      "events": [
+        { "hoursAgo": 61, "location": "Frankfurt", "description": "Shipment picked up" },
+        { "hoursAgo": 6, "location": "Stuttgart", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10029", "customerId": "C-1012", "orderedDaysAgo": 5, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 1,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 44.50 },
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 2, "unitPrice": 449.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA14555697001", "shippedHoursAgo": 56, "estimatedDeliveryInHours": 10,
+      "events": [
+        { "hoursAgo": 56, "location": "Hannover", "description": "Origin scan" },
+        { "hoursAgo": 1, "location": "Stuttgart", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10030", "customerId": "C-1012", "orderedDaysAgo": 3, "status": "CONFIRMED", "statusUpdatedHoursAgo": 49,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 },
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 216.50 },
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 3, "unitPrice": 59.90 },
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 1, "unitPrice": 449.00 }
+    ]
+  },
+  {
+    "id": "ORD-10031", "customerId": "C-1012", "orderedDaysAgo": 2, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 32,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 89.00 }
+    ]
+  },
+  {
+    "id": "ORD-10032", "customerId": "C-1012", "orderedDaysAgo": 1, "status": "CONFIRMED", "statusUpdatedHoursAgo": 20,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 }
+    ]
+  },
+  {
+    "id": "ORD-10033", "customerId": "C-1012", "orderedDaysAgo": 0, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 4,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 },
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 119.00 }
+    ]
+  },
+  {
+    "id": "ORD-10034", "customerId": "C-1013", "orderedDaysAgo": 2, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 7,
+    "currency": "SEK", "shippingCity": "Göteborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TW-BAM", "name": "Bath Towel Set", "quantity": 1, "unitPrice": 459.00 }
+    ]
+  },
+  {
+    "id": "ORD-10035", "customerId": "C-1013", "orderedDaysAgo": 1, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 16,
+    "currency": "SEK", "shippingCity": "Göteborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 679.00 },
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 1, "unitPrice": 5190.00 }
+    ]
+  },
+  {
+    "id": "ORD-10036", "customerId": "C-1014", "orderedDaysAgo": 93, "status": "DELIVERED", "statusUpdatedHoursAgo": 2186,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "SSD-1T", "name": "Portable SSD 1TB", "quantity": 1, "unitPrice": 119.00 },
+      { "sku": "PB-20", "name": "Power Bank 20000mAh", "quantity": 1, "unitPrice": 34.90 },
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD5410348761706", "shippedHoursAgo": 2210, "estimatedDeliveryInHours": -2170, "deliveredHoursAgo": 2186,
+      "events": [
+        { "hoursAgo": 2210, "location": "Nürnberg", "description": "Shipment picked up" },
+        { "hoursAgo": 2206, "location": "Bochum", "description": "In transit" },
+        { "hoursAgo": 2200, "location": "Kassel", "description": "Departure scan" },
+        { "hoursAgo": 2196, "location": "Frankfurt", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 2186, "location": "Frankfurt", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10037", "customerId": "C-1014", "orderedDaysAgo": 71, "status": "DELIVERED", "statusUpdatedHoursAgo": 1603,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "PB-20", "name": "Power Bank 20000mAh", "quantity": 1, "unitPrice": 34.90 },
+      { "sku": "MS-120", "name": "Wireless Mouse", "quantity": 1, "unitPrice": 39.00 },
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 },
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD7906690634480", "shippedHoursAgo": 1661, "estimatedDeliveryInHours": -1596, "deliveredHoursAgo": 1603,
+      "events": [
+        { "hoursAgo": 1661, "location": "Leipzig", "description": "Shipment picked up" },
+        { "hoursAgo": 1658, "location": "Bochum", "description": "In transit" },
+        { "hoursAgo": 1635, "location": "Kassel", "description": "In transit" },
+        { "hoursAgo": 1612, "location": "Frankfurt", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1603, "location": "Frankfurt", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10038", "customerId": "C-1014", "orderedDaysAgo": 11, "status": "ON_HOLD", "statusUpdatedHoursAgo": 36,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 }
+    ]
+  },
+  {
+    "id": "ORD-10039", "customerId": "C-1014", "orderedDaysAgo": 1, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 4,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 2, "unitPrice": 17.50 }
+    ]
+  },
+  {
+    "id": "ORD-10040", "customerId": "C-1015", "orderedDaysAgo": 85, "status": "CANCELLED", "statusUpdatedHoursAgo": 1950,
+    "currency": "EUR", "shippingCity": "Linz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 44.50 }
+    ]
+  },
+  {
+    "id": "ORD-10041", "customerId": "C-1016", "orderedDaysAgo": 32, "status": "CANCELLED", "statusUpdatedHoursAgo": 673,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 3990.00 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 2, "unitPrice": 1019.00 }
+    ]
+  },
+  {
+    "id": "ORD-10042", "customerId": "C-1016", "orderedDaysAgo": 2, "status": "SHIPPED", "statusUpdatedHoursAgo": 41,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 3, "unitPrice": 1690.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00374011881568845", "shippedHoursAgo": 41, "estimatedDeliveryInHours": 70,
+      "events": [
+        { "hoursAgo": 41, "location": "Jönköping", "description": "Item received by PostNord" },
+        { "hoursAgo": 30, "location": "Göteborg", "description": "In transit" },
+        { "hoursAgo": 4, "location": "Örebro", "description": "Arrived at sorting terminal" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10043", "customerId": "C-1016", "orderedDaysAgo": 0, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 1,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 1, "unitPrice": 4990.00 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 4, "unitPrice": 459.00 }
+    ]
+  },
+  {
+    "id": "ORD-10044", "customerId": "C-1017", "orderedDaysAgo": 94, "status": "DELIVERED", "statusUpdatedHoursAgo": 2200,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 112.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA13780895712", "shippedHoursAgo": 2250, "estimatedDeliveryInHours": -2198, "deliveredHoursAgo": 2200,
+      "events": [
+        { "hoursAgo": 2250, "location": "Bochum", "description": "Origin scan" },
+        { "hoursAgo": 2200, "location": "Dortmund", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10045", "customerId": "C-1017", "orderedDaysAgo": 89, "status": "DELIVERED", "statusUpdatedHoursAgo": 2062,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 1, "unitPrice": 149.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA16593301577", "shippedHoursAgo": 2085, "estimatedDeliveryInHours": -2059, "deliveredHoursAgo": 2062,
+      "events": [
+        { "hoursAgo": 2085, "location": "Frankfurt", "description": "Origin scan" },
+        { "hoursAgo": 2080, "location": "Kassel", "description": "Departure scan" },
+        { "hoursAgo": 2062, "location": "Dortmund", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10046", "customerId": "C-1017", "orderedDaysAgo": 78, "status": "DELIVERED", "statusUpdatedHoursAgo": 1818,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 189.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD3256171755576", "shippedHoursAgo": 1841, "estimatedDeliveryInHours": -1824, "deliveredHoursAgo": 1818,
+      "events": [
+        { "hoursAgo": 1841, "location": "Hannover", "description": "Shipment picked up" },
+        { "hoursAgo": 1837, "location": "Leipzig", "description": "Departure scan" },
+        { "hoursAgo": 1818, "location": "Dortmund", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10047", "customerId": "C-1017", "orderedDaysAgo": 33, "status": "DELIVERED", "statusUpdatedHoursAgo": 736,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 59.00 },
+      { "sku": "TW-BAM", "name": "Bath Towel Set", "quantity": 1, "unitPrice": 39.90 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "QW1J4FWS", "shippedHoursAgo": 780, "estimatedDeliveryInHours": -727, "deliveredHoursAgo": 736,
+      "events": [
+        { "hoursAgo": 780, "location": "Leipzig", "description": "Parcel registered" },
+        { "hoursAgo": 736, "location": "Dortmund", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10048", "customerId": "C-1017", "orderedDaysAgo": 6, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 28,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 1, "unitPrice": 59.00 },
+      { "sku": "PB-20", "name": "Power Bank 20000mAh", "quantity": 2, "unitPrice": 34.90 }
+    ]
+  },
+  {
+    "id": "ORD-10049", "customerId": "C-1017", "orderedDaysAgo": 0, "status": "CONFIRMED", "statusUpdatedHoursAgo": 5,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 2, "unitPrice": 285.90 }
+    ]
+  },
+  {
+    "id": "ORD-10050", "customerId": "C-1018", "orderedDaysAgo": 39, "status": "DELIVERED", "statusUpdatedHoursAgo": 849,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 1, "unitPrice": 3290.00 },
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 2, "unitPrice": 3990.00 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 3, "unitPrice": 459.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD6428971339891", "shippedHoursAgo": 901, "estimatedDeliveryInHours": -834, "deliveredHoursAgo": 849,
+      "events": [
+        { "hoursAgo": 901, "location": "Helsingborg", "description": "Shipment picked up" },
+        { "hoursAgo": 867, "location": "Stockholm", "description": "Departure scan" },
+        { "hoursAgo": 849, "location": "Örebro", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10051", "customerId": "C-1018", "orderedDaysAgo": 10, "status": "DELIVERED", "statusUpdatedHoursAgo": 176,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 1019.00 },
+      { "sku": "HP-200", "name": "Noise Cancelling Headphones", "quantity": 1, "unitPrice": 2499.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00376102556172227", "shippedHoursAgo": 215, "estimatedDeliveryInHours": -158, "deliveredHoursAgo": 176,
+      "events": [
+        { "hoursAgo": 215, "location": "Helsingborg", "description": "Item received by PostNord" },
+        { "hoursAgo": 213, "location": "Örebro", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 176, "location": "Örebro", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10052", "customerId": "C-1019", "orderedDaysAgo": 100, "status": "CANCELLED", "statusUpdatedHoursAgo": 2378,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "WL-01", "name": "Wool Beanie", "quantity": 1, "unitPrice": 19.90 }
+    ]
+  },
+  {
+    "id": "ORD-10053", "customerId": "C-1019", "orderedDaysAgo": 98, "status": "DELIVERED", "statusUpdatedHoursAgo": 2243,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BL-300", "name": "Blender", "quantity": 2, "unitPrice": 79.90 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01502759417105", "shippedHoursAgo": 2295, "estimatedDeliveryInHours": -2234, "deliveredHoursAgo": 2243,
+      "events": [
+        { "hoursAgo": 2295, "location": "Hannover", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 2277, "location": "Bochum", "description": "Departed parcel centre" },
+        { "hoursAgo": 2245, "location": "Hamburg", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 2243, "location": "Hamburg", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10054", "customerId": "C-1019", "orderedDaysAgo": 26, "status": "DELIVERED", "statusUpdatedHoursAgo": 541,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 44.50 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1696624474864", "shippedHoursAgo": 588, "estimatedDeliveryInHours": -531, "deliveredHoursAgo": 541,
+      "events": [
+        { "hoursAgo": 588, "location": "Nürnberg", "description": "Shipment picked up" },
+        { "hoursAgo": 541, "location": "Hamburg", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10055", "customerId": "C-1019", "orderedDaysAgo": 6, "status": "SHIPPED", "statusUpdatedHoursAgo": 110,
+    "currency": "EUR", "shippingCity": "Hamburg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CH-500", "name": "Ergonomic Office Chair", "quantity": 1, "unitPrice": 347.00 },
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 1, "unitPrice": 79.00 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "HE9WDNXN", "shippedHoursAgo": 110, "estimatedDeliveryInHours": -55,
+      "events": [
+        { "hoursAgo": 110, "location": "Leipzig", "description": "Parcel registered" },
+        { "hoursAgo": 37, "location": "Kassel", "description": "In transit" },
+        { "hoursAgo": 15, "location": "Kassel", "description": "Delayed due to severe weather" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10056", "customerId": "C-1020", "orderedDaysAgo": 80, "status": "DELIVERED", "statusUpdatedHoursAgo": 1876,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD4910004716176", "shippedHoursAgo": 1906, "estimatedDeliveryInHours": -1870, "deliveredHoursAgo": 1876,
+      "events": [
+        { "hoursAgo": 1906, "location": "Utrecht", "description": "Shipment picked up" },
+        { "hoursAgo": 1884, "location": "Eindhoven", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1876, "location": "Eindhoven", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10057", "customerId": "C-1020", "orderedDaysAgo": 74, "status": "DELIVERED", "statusUpdatedHoursAgo": 1650,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 89.00 },
+      { "sku": "HUB-7", "name": "USB-C Hub 7-in-1", "quantity": 1, "unitPrice": 49.90 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01500279697171", "shippedHoursAgo": 1746, "estimatedDeliveryInHours": -1634, "deliveredHoursAgo": 1650,
+      "events": [
+        { "hoursAgo": 1746, "location": "Venlo", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 1712, "location": "Utrecht", "description": "In transit" },
+        { "hoursAgo": 1696, "location": "Eindhoven", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 1650, "location": "Eindhoven", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10058", "customerId": "C-1020", "orderedDaysAgo": 7, "status": "SHIPPED", "statusUpdatedHoursAgo": 134,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 14.50 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA11486189733", "shippedHoursAgo": 134, "estimatedDeliveryInHours": -13,
+      "events": [
+        { "hoursAgo": 134, "location": "Venlo", "description": "Origin scan" },
+        { "hoursAgo": 76, "location": "Utrecht", "description": "Delayed due to a missed connection" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10059", "customerId": "C-1020", "orderedDaysAgo": 4, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 4,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 3, "unitPrice": 17.50 },
+      { "sku": "CH-500", "name": "Ergonomic Office Chair", "quantity": 2, "unitPrice": 347.00 }
+    ]
+  },
+  {
+    "id": "ORD-10060", "customerId": "C-1020", "orderedDaysAgo": 3, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 8,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 1, "unitPrice": 9.90 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD5096415466000", "shippedHoursAgo": 55, "estimatedDeliveryInHours": 3,
+      "events": [
+        { "hoursAgo": 55, "location": "Venlo", "description": "Shipment picked up" },
+        { "hoursAgo": 32, "location": "Rotterdam", "description": "In transit" },
+        { "hoursAgo": 25, "location": "Utrecht", "description": "Departure scan" },
+        { "hoursAgo": 8, "location": "Eindhoven", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10061", "customerId": "C-1021", "orderedDaysAgo": 115, "status": "DELIVERED", "statusUpdatedHoursAgo": 2713,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 1, "unitPrice": 399.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA15179550362", "shippedHoursAgo": 2743, "estimatedDeliveryInHours": -2698, "deliveredHoursAgo": 2713,
+      "events": [
+        { "hoursAgo": 2743, "location": "Örebro", "description": "Origin scan" },
+        { "hoursAgo": 2732, "location": "Helsingborg", "description": "In transit" },
+        { "hoursAgo": 2719, "location": "Stockholm", "description": "Departure scan" },
+        { "hoursAgo": 2713, "location": "Gävle", "description": "Delivered, left at front door" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10062", "customerId": "C-1021", "orderedDaysAgo": 106, "status": "RETURNED", "statusUpdatedHoursAgo": 2336,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 2190.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD7973533422623", "shippedHoursAgo": 2516, "estimatedDeliveryInHours": -2486, "deliveredHoursAgo": 2489,
+      "events": [
+        { "hoursAgo": 2516, "location": "Jönköping", "description": "Shipment picked up" },
+        { "hoursAgo": 2506, "location": "Örebro", "description": "Departure scan" },
+        { "hoursAgo": 2491, "location": "Gävle", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 2489, "location": "Gävle", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10063", "customerId": "C-1021", "orderedDaysAgo": 100, "status": "CANCELLED", "statusUpdatedHoursAgo": 2396,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 1029.00 }
+    ]
+  },
+  {
+    "id": "ORD-10064", "customerId": "C-1021", "orderedDaysAgo": 12, "status": "DELIVERED", "statusUpdatedHoursAgo": 178,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 2490.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370610376544969", "shippedHoursAgo": 224, "estimatedDeliveryInHours": -167, "deliveredHoursAgo": 178,
+      "events": [
+        { "hoursAgo": 224, "location": "Örebro", "description": "Item received by PostNord" },
+        { "hoursAgo": 219, "location": "Göteborg", "description": "In transit" },
+        { "hoursAgo": 191, "location": "Malmö", "description": "In transit" },
+        { "hoursAgo": 179, "location": "Göteborg", "description": "Departed sorting terminal" },
+        { "hoursAgo": 178, "location": "Gävle", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10065", "customerId": "C-1021", "orderedDaysAgo": 3, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 6,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 3, "unitPrice": 679.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD9032317582195", "shippedHoursAgo": 54, "estimatedDeliveryInHours": 10,
+      "events": [
+        { "hoursAgo": 54, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 50, "location": "Jönköping", "description": "In transit" },
+        { "hoursAgo": 45, "location": "Gävle", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 6, "location": "Gävle", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10066", "customerId": "C-1021", "orderedDaysAgo": 2, "status": "CONFIRMED", "statusUpdatedHoursAgo": 46,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SW-FIT", "name": "Fitness Watch", "quantity": 1, "unitPrice": 1790.00 }
+    ]
+  },
+  {
+    "id": "ORD-10067", "customerId": "C-1022", "orderedDaysAgo": 92, "status": "DELIVERED", "statusUpdatedHoursAgo": 2100,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 2, "unitPrice": 149.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD2553924826579", "shippedHoursAgo": 2156, "estimatedDeliveryInHours": -2101, "deliveredHoursAgo": 2100,
+      "events": [
+        { "hoursAgo": 2156, "location": "Frankfurt", "description": "Shipment picked up" },
+        { "hoursAgo": 2143, "location": "Leipzig", "description": "Departure scan" },
+        { "hoursAgo": 2112, "location": "Kassel", "description": "Departure scan" },
+        { "hoursAgo": 2104, "location": "Hannover", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 2100, "location": "Hannover", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10068", "customerId": "C-1022", "orderedDaysAgo": 64, "status": "DELIVERED", "statusUpdatedHoursAgo": 1449,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BK-102", "name": "Paperback Novel", "quantity": 3, "unitPrice": 12.99 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "XX7QA8KF", "shippedHoursAgo": 1480, "estimatedDeliveryInHours": -1440, "deliveredHoursAgo": 1449,
+      "events": [
+        { "hoursAgo": 1480, "location": "Kassel", "description": "Parcel registered" },
+        { "hoursAgo": 1458, "location": "Bochum", "description": "In transit" },
+        { "hoursAgo": 1457, "location": "Nürnberg", "description": "In transit" },
+        { "hoursAgo": 1449, "location": "Hannover", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10069", "customerId": "C-1022", "orderedDaysAgo": 53, "status": "DELIVERED", "statusUpdatedHoursAgo": 1216,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 112.00 },
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 14.50 },
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 1, "unitPrice": 429.00 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "V20KX7NZ", "shippedHoursAgo": 1259, "estimatedDeliveryInHours": -1197, "deliveredHoursAgo": 1216,
+      "events": [
+        { "hoursAgo": 1259, "location": "Frankfurt", "description": "Parcel registered" },
+        { "hoursAgo": 1216, "location": "Hannover", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10070", "customerId": "C-1022", "orderedDaysAgo": 0, "status": "CONFIRMED", "statusUpdatedHoursAgo": 10,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "VC-RB", "name": "Robot Vacuum", "quantity": 1, "unitPrice": 299.00 },
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 }
+    ]
+  },
+  {
+    "id": "ORD-10071", "customerId": "C-1023", "orderedDaysAgo": 82, "status": "DELIVERED", "statusUpdatedHoursAgo": 1893,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SB-10", "name": "Sleeping Bag", "quantity": 1, "unitPrice": 1190.00 },
+      { "sku": "AF-55", "name": "Air Fryer", "quantity": 1, "unitPrice": 1250.00 },
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 2, "unitPrice": 219.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00379743672117793", "shippedHoursAgo": 1960, "estimatedDeliveryInHours": -1875, "deliveredHoursAgo": 1893,
+      "events": [
+        { "hoursAgo": 1960, "location": "Göteborg", "description": "Item received by PostNord" },
+        { "hoursAgo": 1959, "location": "Helsingborg", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1957, "location": "Helsingborg", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1938, "location": "Karlstad", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 1893, "location": "Karlstad", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10072", "customerId": "C-1023", "orderedDaysAgo": 50, "status": "RETURNED", "statusUpdatedHoursAgo": 852,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 1, "unitPrice": 279.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD3125343360256", "shippedHoursAgo": 1158, "estimatedDeliveryInHours": -1080, "deliveredHoursAgo": 1083,
+      "events": [
+        { "hoursAgo": 1158, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 1132, "location": "Stockholm", "description": "Departure scan" },
+        { "hoursAgo": 1119, "location": "Örebro", "description": "Departure scan" },
+        { "hoursAgo": 1083, "location": "Karlstad", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10073", "customerId": "C-1023", "orderedDaysAgo": 21, "status": "CANCELLED", "statusUpdatedHoursAgo": 451,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 1, "unitPrice": 679.00 },
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 790.00 },
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 1, "unitPrice": 689.00 }
+    ]
+  },
+  {
+    "id": "ORD-10074", "customerId": "C-1023", "orderedDaysAgo": 4, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 36,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 1019.00 }
+    ]
+  },
+  {
+    "id": "ORD-10075", "customerId": "C-1023", "orderedDaysAgo": 3, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 4,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 1, "unitPrice": 199.00 },
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 2, "unitPrice": 679.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00379067348627159", "shippedHoursAgo": 35, "estimatedDeliveryInHours": 6,
+      "events": [
+        { "hoursAgo": 35, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 31, "location": "Karlstad", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 4, "location": "Karlstad", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10076", "customerId": "C-1023", "orderedDaysAgo": 2, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 37,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 169.00 }
+    ]
+  },
+  {
+    "id": "ORD-10077", "customerId": "C-1023", "orderedDaysAgo": 1, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 8,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "HUB-7", "name": "USB-C Hub 7-in-1", "quantity": 1, "unitPrice": 569.00 }
+    ]
+  },
+  {
+    "id": "ORD-10078", "customerId": "C-1024", "orderedDaysAgo": 80, "status": "DELIVERED", "statusUpdatedHoursAgo": 1826,
+    "currency": "EUR", "shippingCity": "Düsseldorf", "shippingCountry": "DE",
+    "items": [
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 },
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 216.50 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0663490947871", "shippedHoursAgo": 1913, "estimatedDeliveryInHours": -1811, "deliveredHoursAgo": 1826,
+      "events": [
+        { "hoursAgo": 1913, "location": "Nürnberg", "description": "Shipment picked up" },
+        { "hoursAgo": 1908, "location": "Frankfurt", "description": "Departure scan" },
+        { "hoursAgo": 1864, "location": "Hannover", "description": "Departure scan" },
+        { "hoursAgo": 1835, "location": "Düsseldorf", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1826, "location": "Düsseldorf", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10079", "customerId": "C-1024", "orderedDaysAgo": 16, "status": "CANCELLED", "statusUpdatedHoursAgo": 309,
+    "currency": "EUR", "shippingCity": "Düsseldorf", "shippingCountry": "DE",
+    "items": [
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 1, "unitPrice": 79.00 },
+      { "sku": "AF-55", "name": "Air Fryer", "quantity": 3, "unitPrice": 109.00 }
+    ]
+  },
+  {
+    "id": "ORD-10080", "customerId": "C-1024", "orderedDaysAgo": 12, "status": "ON_HOLD", "statusUpdatedHoursAgo": 160,
+    "currency": "EUR", "shippingCity": "Düsseldorf", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 }
+    ]
+  },
+  {
+    "id": "ORD-10081", "customerId": "C-1025", "orderedDaysAgo": 118, "status": "CANCELLED", "statusUpdatedHoursAgo": 2751,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "HP-200", "name": "Noise Cancelling Headphones", "quantity": 1, "unitPrice": 2499.00 },
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 1390.00 }
+    ]
+  },
+  {
+    "id": "ORD-10082", "customerId": "C-1026", "orderedDaysAgo": 92, "status": "DELIVERED", "statusUpdatedHoursAgo": 2093,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 89.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01502731286238", "shippedHoursAgo": 2145, "estimatedDeliveryInHours": -2076, "deliveredHoursAgo": 2093,
+      "events": [
+        { "hoursAgo": 2145, "location": "Leipzig", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 2118, "location": "Kassel", "description": "In transit" },
+        { "hoursAgo": 2093, "location": "Frankfurt", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10083", "customerId": "C-1026", "orderedDaysAgo": 73, "status": "DELIVERED", "statusUpdatedHoursAgo": 1648,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 59.00 },
+      { "sku": "HUB-7", "name": "USB-C Hub 7-in-1", "quantity": 2, "unitPrice": 49.90 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "RD2MX2K3", "shippedHoursAgo": 1743, "estimatedDeliveryInHours": -1632, "deliveredHoursAgo": 1648,
+      "events": [
+        { "hoursAgo": 1743, "location": "Bochum", "description": "Parcel registered" },
+        { "hoursAgo": 1710, "location": "Nürnberg", "description": "Departed GLS depot" },
+        { "hoursAgo": 1648, "location": "Frankfurt", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10084", "customerId": "C-1026", "orderedDaysAgo": 57, "status": "DELIVERED", "statusUpdatedHoursAgo": 1242,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 },
+      { "sku": "BL-300", "name": "Blender", "quantity": 1, "unitPrice": 79.90 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD2969503893512", "shippedHoursAgo": 1332, "estimatedDeliveryInHours": -1232, "deliveredHoursAgo": 1242,
+      "events": [
+        { "hoursAgo": 1332, "location": "Nürnberg", "description": "Shipment picked up" },
+        { "hoursAgo": 1297, "location": "Kassel", "description": "Departure scan" },
+        { "hoursAgo": 1288, "location": "Frankfurt", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1242, "location": "Frankfurt", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10085", "customerId": "C-1026", "orderedDaysAgo": 55, "status": "CANCELLED", "statusUpdatedHoursAgo": 1317,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "HUB-7", "name": "USB-C Hub 7-in-1", "quantity": 4, "unitPrice": 49.90 }
+    ]
+  },
+  {
+    "id": "ORD-10086", "customerId": "C-1026", "orderedDaysAgo": 28, "status": "DELIVERED", "statusUpdatedHoursAgo": 609,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TW-BAM", "name": "Bath Towel Set", "quantity": 1, "unitPrice": 39.90 },
+      { "sku": "CH-500", "name": "Ergonomic Office Chair", "quantity": 1, "unitPrice": 347.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01503351777736", "shippedHoursAgo": 654, "estimatedDeliveryInHours": -609, "deliveredHoursAgo": 609,
+      "events": [
+        { "hoursAgo": 654, "location": "Nürnberg", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 609, "location": "Frankfurt", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10087", "customerId": "C-1026", "orderedDaysAgo": 12, "status": "DELIVERED", "statusUpdatedHoursAgo": 239,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 112.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD2948129111157", "shippedHoursAgo": 278, "estimatedDeliveryInHours": -249, "deliveredHoursAgo": 239,
+      "events": [
+        { "hoursAgo": 278, "location": "Bochum", "description": "Shipment picked up" },
+        { "hoursAgo": 239, "location": "Frankfurt", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10088", "customerId": "C-1026", "orderedDaysAgo": 6, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 27,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 3, "unitPrice": 18.90 },
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 1, "unitPrice": 79.00 }
+    ]
+  },
+  {
+    "id": "ORD-10089", "customerId": "C-1026", "orderedDaysAgo": 3, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 5,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 59.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA14454640004", "shippedHoursAgo": 25, "estimatedDeliveryInHours": 10,
+      "events": [
+        { "hoursAgo": 25, "location": "Bochum", "description": "Origin scan" },
+        { "hoursAgo": 7, "location": "Frankfurt", "description": "Arrival scan" },
+        { "hoursAgo": 5, "location": "Frankfurt", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10090", "customerId": "C-1026", "orderedDaysAgo": 2, "status": "CONFIRMED", "statusUpdatedHoursAgo": 2,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 1, "unitPrice": 18.90 },
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 }
+    ]
+  },
+  {
+    "id": "ORD-10091", "customerId": "C-1026", "orderedDaysAgo": 1, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 19,
+    "currency": "EUR", "shippingCity": "Frankfurt", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 3, "unitPrice": 69.00 },
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 1, "unitPrice": 24.50 }
+    ]
+  },
+  {
+    "id": "ORD-10092", "customerId": "C-1027", "orderedDaysAgo": 55, "status": "CANCELLED", "statusUpdatedHoursAgo": 1246,
+    "currency": "EUR", "shippingCity": "Graz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 1, "unitPrice": 149.00 },
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 },
+      { "sku": "SB-10", "name": "Sleeping Bag", "quantity": 1, "unitPrice": 103.50 }
+    ]
+  },
+  {
+    "id": "ORD-10093", "customerId": "C-1027", "orderedDaysAgo": 49, "status": "DELIVERED", "statusUpdatedHoursAgo": 1114,
+    "currency": "EUR", "shippingCity": "Graz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "LMP-40", "name": "Desk Lamp", "quantity": 1, "unitPrice": 52.00 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "SC4MYKUA", "shippedHoursAgo": 1135, "estimatedDeliveryInHours": -1098, "deliveredHoursAgo": 1114,
+      "events": [
+        { "hoursAgo": 1135, "location": "Wien", "description": "Parcel registered" },
+        { "hoursAgo": 1127, "location": "Salzburg", "description": "Departed GLS depot" },
+        { "hoursAgo": 1124, "location": "Linz", "description": "In transit" },
+        { "hoursAgo": 1121, "location": "Salzburg", "description": "In transit" },
+        { "hoursAgo": 1114, "location": "Graz", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10094", "customerId": "C-1027", "orderedDaysAgo": 25, "status": "DELIVERED", "statusUpdatedHoursAgo": 518,
+    "currency": "EUR", "shippingCity": "Graz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 },
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 1, "unitPrice": 285.90 },
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 189.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01504579827351", "shippedHoursAgo": 560, "estimatedDeliveryInHours": -528, "deliveredHoursAgo": 518,
+      "events": [
+        { "hoursAgo": 560, "location": "Linz", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 523, "location": "Wien", "description": "Departed parcel centre" },
+        { "hoursAgo": 518, "location": "Graz", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10095", "customerId": "C-1027", "orderedDaysAgo": 8, "status": "RETURNED", "statusUpdatedHoursAgo": 7,
+    "currency": "EUR", "shippingCity": "Graz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 39.90 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1221498883819", "shippedHoursAgo": 169, "estimatedDeliveryInHours": -116, "deliveredHoursAgo": 107,
+      "events": [
+        { "hoursAgo": 169, "location": "Wien", "description": "Shipment picked up" },
+        { "hoursAgo": 135, "location": "Graz", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 107, "location": "Graz", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10096", "customerId": "C-1027", "orderedDaysAgo": 6, "status": "SHIPPED", "statusUpdatedHoursAgo": 112,
+    "currency": "EUR", "shippingCity": "Graz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD6107817984423", "shippedHoursAgo": 112, "estimatedDeliveryInHours": -47,
+      "events": [
+        { "hoursAgo": 112, "location": "Wien", "description": "Shipment picked up" },
+        { "hoursAgo": 85, "location": "Salzburg", "description": "In transit" },
+        { "hoursAgo": 31, "location": "Linz", "description": "Delayed due to a missed connection" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10097", "customerId": "C-1028", "orderedDaysAgo": 13, "status": "SHIPPED", "statusUpdatedHoursAgo": 131,
+    "currency": "SEK", "shippingCity": "Jönköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "PB-20", "name": "Power Bank 20000mAh", "quantity": 2, "unitPrice": 399.00 },
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 1, "unitPrice": 199.00 },
+      { "sku": "TW-BAM", "name": "Bath Towel Set", "quantity": 1, "unitPrice": 459.00 },
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 2, "unitPrice": 1390.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00373755430642892", "shippedHoursAgo": 131, "estimatedDeliveryInHours": -8,
+      "events": [
+        { "hoursAgo": 131, "location": "Örebro", "description": "Item received by PostNord" },
+        { "hoursAgo": 66, "location": "Göteborg", "description": "Delayed due to a vehicle breakdown" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10098", "customerId": "C-1029", "orderedDaysAgo": 61, "status": "DELIVERED", "statusUpdatedHoursAgo": 1429,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MS-120", "name": "Wireless Mouse", "quantity": 1, "unitPrice": 39.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01509177054127", "shippedHoursAgo": 1456, "estimatedDeliveryInHours": -1422, "deliveredHoursAgo": 1429,
+      "events": [
+        { "hoursAgo": 1456, "location": "Kassel", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 1441, "location": "Bochum", "description": "Departed parcel centre" },
+        { "hoursAgo": 1435, "location": "Nürnberg", "description": "In transit" },
+        { "hoursAgo": 1429, "location": "Stuttgart", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10099", "customerId": "C-1029", "orderedDaysAgo": 14, "status": "ON_HOLD", "statusUpdatedHoursAgo": 237,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 2, "unitPrice": 69.00 },
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 }
+    ]
+  },
+  {
+    "id": "ORD-10100", "customerId": "C-1029", "orderedDaysAgo": 2, "status": "ON_HOLD", "statusUpdatedHoursAgo": 6,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BL-300", "name": "Blender", "quantity": 2, "unitPrice": 79.90 }
+    ]
+  },
+  {
+    "id": "ORD-10101", "customerId": "C-1030", "orderedDaysAgo": 62, "status": "CANCELLED", "statusUpdatedHoursAgo": 1410,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BK-101", "name": "Cookbook", "quantity": 1, "unitPrice": 289.00 }
+    ]
+  },
+  {
+    "id": "ORD-10102", "customerId": "C-1030", "orderedDaysAgo": 60, "status": "DELIVERED", "statusUpdatedHoursAgo": 1326,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 790.00 },
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 2, "unitPrice": 114.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1309066586245", "shippedHoursAgo": 1401, "estimatedDeliveryInHours": -1331, "deliveredHoursAgo": 1326,
+      "events": [
+        { "hoursAgo": 1401, "location": "Göteborg", "description": "Shipment picked up" },
+        { "hoursAgo": 1398, "location": "Jönköping", "description": "In transit" },
+        { "hoursAgo": 1383, "location": "Helsingborg", "description": "Departure scan" },
+        { "hoursAgo": 1355, "location": "Linköping", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1326, "location": "Linköping", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10103", "customerId": "C-1030", "orderedDaysAgo": 48, "status": "DELIVERED", "statusUpdatedHoursAgo": 1107,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 1, "unitPrice": 2190.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA11480246943", "shippedHoursAgo": 1144, "estimatedDeliveryInHours": -1115, "deliveredHoursAgo": 1107,
+      "events": [
+        { "hoursAgo": 1144, "location": "Göteborg", "description": "Origin scan" },
+        { "hoursAgo": 1143, "location": "Örebro", "description": "In transit" },
+        { "hoursAgo": 1134, "location": "Jönköping", "description": "Departure scan" },
+        { "hoursAgo": 1112, "location": "Linköping", "description": "Arrival scan" },
+        { "hoursAgo": 1107, "location": "Linköping", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10104", "customerId": "C-1030", "orderedDaysAgo": 33, "status": "DELIVERED", "statusUpdatedHoursAgo": 657,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 790.00 },
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 1, "unitPrice": 399.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1584020699250", "shippedHoursAgo": 745, "estimatedDeliveryInHours": -638, "deliveredHoursAgo": 657,
+      "events": [
+        { "hoursAgo": 745, "location": "Stockholm", "description": "Shipment picked up" },
+        { "hoursAgo": 730, "location": "Göteborg", "description": "Departure scan" },
+        { "hoursAgo": 673, "location": "Göteborg", "description": "Departure scan" },
+        { "hoursAgo": 660, "location": "Jönköping", "description": "Departure scan" },
+        { "hoursAgo": 657, "location": "Linköping", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10105", "customerId": "C-1030", "orderedDaysAgo": 21, "status": "DELIVERED", "statusUpdatedHoursAgo": 444,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 1, "unitPrice": 790.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD8577727904291", "shippedHoursAgo": 486, "estimatedDeliveryInHours": -439, "deliveredHoursAgo": 444,
+      "events": [
+        { "hoursAgo": 486, "location": "Göteborg", "description": "Shipment picked up" },
+        { "hoursAgo": 444, "location": "Linköping", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10106", "customerId": "C-1030", "orderedDaysAgo": 8, "status": "SHIPPED", "statusUpdatedHoursAgo": 93,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 1, "unitPrice": 3290.00 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 4, "unitPrice": 459.00 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 1019.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD2694521551313", "shippedHoursAgo": 93, "estimatedDeliveryInHours": 47,
+      "events": [
+        { "hoursAgo": 93, "location": "Jönköping", "description": "Shipment picked up" },
+        { "hoursAgo": 61, "location": "Malmö", "description": "In transit" },
+        { "hoursAgo": 47, "location": "Örebro", "description": "Departure scan" },
+        { "hoursAgo": 24, "location": "Linköping", "description": "Arrived at delivery hub" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10107", "customerId": "C-1030", "orderedDaysAgo": 5, "status": "SHIPPED", "statusUpdatedHoursAgo": 35,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 1019.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00371798026194222", "shippedHoursAgo": 35, "estimatedDeliveryInHours": 3,
+      "events": [
+        { "hoursAgo": 35, "location": "Jönköping", "description": "Item received by PostNord" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10108", "customerId": "C-1030", "orderedDaysAgo": 4, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 1,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 679.00 }
+    ]
+  },
+  {
+    "id": "ORD-10109", "customerId": "C-1030", "orderedDaysAgo": 2, "status": "CONFIRMED", "statusUpdatedHoursAgo": 10,
+    "currency": "SEK", "shippingCity": "Linköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 1, "unitPrice": 279.00 }
+    ]
+  },
+  {
+    "id": "ORD-10110", "customerId": "C-1031", "orderedDaysAgo": 106, "status": "CANCELLED", "statusUpdatedHoursAgo": 2540,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 349.00 },
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 79.00 },
+      { "sku": "VC-RB", "name": "Robot Vacuum", "quantity": 2, "unitPrice": 299.00 }
+    ]
+  },
+  {
+    "id": "ORD-10111", "customerId": "C-1031", "orderedDaysAgo": 54, "status": "DELIVERED", "statusUpdatedHoursAgo": 1230,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 2, "unitPrice": 449.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1117715465803", "shippedHoursAgo": 1261, "estimatedDeliveryInHours": -1218, "deliveredHoursAgo": 1230,
+      "events": [
+        { "hoursAgo": 1261, "location": "Bochum", "description": "Shipment picked up" },
+        { "hoursAgo": 1246, "location": "Berlin", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1230, "location": "Berlin", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10112", "customerId": "C-1031", "orderedDaysAgo": 4, "status": "SHIPPED", "statusUpdatedHoursAgo": 41,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 89.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA10188551124", "shippedHoursAgo": 41, "estimatedDeliveryInHours": 82,
+      "events": [
+        { "hoursAgo": 41, "location": "Bochum", "description": "Origin scan" },
+        { "hoursAgo": 37, "location": "Berlin", "description": "Arrival scan" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10113", "customerId": "C-1031", "orderedDaysAgo": 2, "status": "CONFIRMED", "statusUpdatedHoursAgo": 14,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 1, "unitPrice": 9.90 },
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 1, "unitPrice": 59.90 }
+    ]
+  },
+  {
+    "id": "ORD-10114", "customerId": "C-1031", "orderedDaysAgo": 1, "status": "CONFIRMED", "statusUpdatedHoursAgo": 10,
+    "currency": "EUR", "shippingCity": "Berlin", "shippingCountry": "DE",
+    "items": [
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 4, "unitPrice": 18.90 }
+    ]
+  },
+  {
+    "id": "ORD-10115", "customerId": "C-1032", "orderedDaysAgo": 4, "status": "ON_HOLD", "statusUpdatedHoursAgo": 32,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "VC-RB", "name": "Robot Vacuum", "quantity": 1, "unitPrice": 299.00 },
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 3, "unitPrice": 59.00 }
+    ]
+  },
+  {
+    "id": "ORD-10116", "customerId": "C-1032", "orderedDaysAgo": 1, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 16,
+    "currency": "EUR", "shippingCity": "Eindhoven", "shippingCountry": "NL",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 2, "unitPrice": 112.00 }
+    ]
+  },
+  {
+    "id": "ORD-10117", "customerId": "C-1033", "orderedDaysAgo": 70, "status": "RETURNED", "statusUpdatedHoursAgo": 1369,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 2490.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD1940151790779", "shippedHoursAgo": 1638, "estimatedDeliveryInHours": -1581, "deliveredHoursAgo": 1572,
+      "events": [
+        { "hoursAgo": 1638, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 1630, "location": "Jönköping", "description": "In transit" },
+        { "hoursAgo": 1608, "location": "Helsingborg", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 1572, "location": "Helsingborg", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10118", "customerId": "C-1033", "orderedDaysAgo": 61, "status": "DELIVERED", "statusUpdatedHoursAgo": 1431,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 3, "unitPrice": 2490.00 },
+      { "sku": "TB-11C", "name": "Tablet Cover", "quantity": 1, "unitPrice": 459.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00374182165774583", "shippedHoursAgo": 1453, "estimatedDeliveryInHours": -1428, "deliveredHoursAgo": 1431,
+      "events": [
+        { "hoursAgo": 1453, "location": "Malmö", "description": "Item received by PostNord" },
+        { "hoursAgo": 1441, "location": "Örebro", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1431, "location": "Helsingborg", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10119", "customerId": "C-1034", "orderedDaysAgo": 88, "status": "DELIVERED", "statusUpdatedHoursAgo": 2046,
+    "currency": "EUR", "shippingCity": "Leipzig", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 3, "unitPrice": 14.50 },
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 1, "unitPrice": 9.90 },
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 1, "unitPrice": 79.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01507775313896", "shippedHoursAgo": 2102, "estimatedDeliveryInHours": -2026, "deliveredHoursAgo": 2046,
+      "events": [
+        { "hoursAgo": 2102, "location": "Hannover", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 2064, "location": "Leipzig", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 2046, "location": "Leipzig", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10120", "customerId": "C-1034", "orderedDaysAgo": 44, "status": "DELIVERED", "statusUpdatedHoursAgo": 1008,
+    "currency": "EUR", "shippingCity": "Leipzig", "shippingCountry": "DE",
+    "items": [
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 1, "unitPrice": 59.90 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "UZN22ABE", "shippedHoursAgo": 1037, "estimatedDeliveryInHours": -991, "deliveredHoursAgo": 1008,
+      "events": [
+        { "hoursAgo": 1037, "location": "Kassel", "description": "Parcel registered" },
+        { "hoursAgo": 1027, "location": "Frankfurt", "description": "In transit" },
+        { "hoursAgo": 1017, "location": "Leipzig", "description": "Arrived at GLS depot" },
+        { "hoursAgo": 1008, "location": "Leipzig", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10121", "customerId": "C-1035", "orderedDaysAgo": 35, "status": "CANCELLED", "statusUpdatedHoursAgo": 812,
+    "currency": "SEK", "shippingCity": "Örebro", "shippingCountry": "SE",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 509.00 }
+    ]
+  },
+  {
+    "id": "ORD-10122", "customerId": "C-1036", "orderedDaysAgo": 0, "status": "CONFIRMED", "statusUpdatedHoursAgo": 11,
+    "currency": "EUR", "shippingCity": "Dresden", "shippingCountry": "DE",
+    "items": [
+      { "sku": "BK-101", "name": "Cookbook", "quantity": 2, "unitPrice": 24.99 }
+    ]
+  },
+  {
+    "id": "ORD-10123", "customerId": "C-1037", "orderedDaysAgo": 72, "status": "DELIVERED", "statusUpdatedHoursAgo": 1636,
+    "currency": "EUR", "shippingCity": "Linz", "shippingCountry": "AT",
+    "items": [
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 1, "unitPrice": 59.90 },
+      { "sku": "BT-55", "name": "Hiking Boots", "quantity": 3, "unitPrice": 189.00 },
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 2, "unitPrice": 24.50 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "QD1C3E7V", "shippedHoursAgo": 1712, "estimatedDeliveryInHours": -1620, "deliveredHoursAgo": 1636,
+      "events": [
+        { "hoursAgo": 1712, "location": "Graz", "description": "Parcel registered" },
+        { "hoursAgo": 1689, "location": "Wien", "description": "In transit" },
+        { "hoursAgo": 1636, "location": "Linz", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10124", "customerId": "C-1038", "orderedDaysAgo": 79, "status": "DELIVERED", "statusUpdatedHoursAgo": 1793,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 2, "unitPrice": 899.00 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 1019.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00374055881075632", "shippedHoursAgo": 1854, "estimatedDeliveryInHours": -1802, "deliveredHoursAgo": 1793,
+      "events": [
+        { "hoursAgo": 1854, "location": "Örebro", "description": "Item received by PostNord" },
+        { "hoursAgo": 1823, "location": "Helsingborg", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 1793, "location": "Helsingborg", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10125", "customerId": "C-1038", "orderedDaysAgo": 71, "status": "DELIVERED", "statusUpdatedHoursAgo": 1621,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 1, "unitPrice": 5190.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00379300879792451", "shippedHoursAgo": 1653, "estimatedDeliveryInHours": -1612, "deliveredHoursAgo": 1621,
+      "events": [
+        { "hoursAgo": 1653, "location": "Örebro", "description": "Item received by PostNord" },
+        { "hoursAgo": 1621, "location": "Helsingborg", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10126", "customerId": "C-1038", "orderedDaysAgo": 8, "status": "SHIPPED", "statusUpdatedHoursAgo": 85,
+    "currency": "SEK", "shippingCity": "Helsingborg", "shippingCountry": "SE",
+    "items": [
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 3, "unitPrice": 1390.00 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 2, "unitPrice": 1019.00 },
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 1, "unitPrice": 1029.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD9829326797381", "shippedHoursAgo": 85, "estimatedDeliveryInHours": 86,
+      "events": [
+        { "hoursAgo": 85, "location": "Malmö", "description": "Shipment picked up" },
+        { "hoursAgo": 20, "location": "Stockholm", "description": "In transit" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10127", "customerId": "C-1039", "orderedDaysAgo": 8, "status": "SHIPPED", "statusUpdatedHoursAgo": 80,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "AF-55", "name": "Air Fryer", "quantity": 2, "unitPrice": 109.00 },
+      { "sku": "HP-200", "name": "Noise Cancelling Headphones", "quantity": 1, "unitPrice": 219.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA19856795250", "shippedHoursAgo": 80, "estimatedDeliveryInHours": 31,
+      "events": [
+        { "hoursAgo": 80, "location": "Bochum", "description": "Origin scan" },
+        { "hoursAgo": 70, "location": "Leipzig", "description": "Departure scan" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10128", "customerId": "C-1039", "orderedDaysAgo": 3, "status": "CONFIRMED", "statusUpdatedHoursAgo": 27,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GR-08", "name": "Coffee Grinder", "quantity": 2, "unitPrice": 89.00 }
+    ]
+  },
+  {
+    "id": "ORD-10129", "customerId": "C-1039", "orderedDaysAgo": 2, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 2,
+    "currency": "EUR", "shippingCity": "Stuttgart", "shippingCountry": "DE",
+    "items": [
+      { "sku": "JK-77", "name": "Rain Jacket", "quantity": 1, "unitPrice": 149.00 }
+    ]
+  },
+  {
+    "id": "ORD-10130", "customerId": "C-1040", "orderedDaysAgo": 25, "status": "DELIVERED", "statusUpdatedHoursAgo": 527,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 1390.00 },
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 129.00 },
+      { "sku": "PN-03", "name": "Fountain Pen", "quantity": 1, "unitPrice": 279.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA19373420832", "shippedHoursAgo": 567, "estimatedDeliveryInHours": -528, "deliveredHoursAgo": 527,
+      "events": [
+        { "hoursAgo": 567, "location": "Stockholm", "description": "Origin scan" },
+        { "hoursAgo": 562, "location": "Örebro", "description": "In transit" },
+        { "hoursAgo": 556, "location": "Örebro", "description": "Departure scan" },
+        { "hoursAgo": 553, "location": "Gävle", "description": "Arrival scan" },
+        { "hoursAgo": 527, "location": "Gävle", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10131", "customerId": "C-1040", "orderedDaysAgo": 18, "status": "RETURNED", "statusUpdatedHoursAgo": 119,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SSD-1T", "name": "Portable SSD 1TB", "quantity": 4, "unitPrice": 1390.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370568096581049", "shippedHoursAgo": 388, "estimatedDeliveryInHours": -294, "deliveredHoursAgo": 307,
+      "events": [
+        { "hoursAgo": 388, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 307, "location": "Gävle", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10132", "customerId": "C-1040", "orderedDaysAgo": 8, "status": "SHIPPED", "statusUpdatedHoursAgo": 31,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "SPK-20", "name": "Bluetooth Speaker", "quantity": 2, "unitPrice": 899.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370328280516277", "shippedHoursAgo": 31, "estimatedDeliveryInHours": 36,
+      "events": [
+        { "hoursAgo": 31, "location": "Jönköping", "description": "Item received by PostNord" },
+        { "hoursAgo": 28, "location": "Göteborg", "description": "Departed sorting terminal" },
+        { "hoursAgo": 26, "location": "Malmö", "description": "In transit" },
+        { "hoursAgo": 16, "location": "Örebro", "description": "Departed sorting terminal" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10133", "customerId": "C-1040", "orderedDaysAgo": 3, "status": "DELIVERED", "statusUpdatedHoursAgo": 1,
+    "currency": "SEK", "shippingCity": "Gävle", "shippingCountry": "SE",
+    "items": [
+      { "sku": "TN-01", "name": "Tent 2P", "quantity": 1, "unitPrice": 2490.00 },
+      { "sku": "AF-55", "name": "Air Fryer", "quantity": 1, "unitPrice": 1250.00 },
+      { "sku": "CH-500", "name": "Ergonomic Office Chair", "quantity": 2, "unitPrice": 3990.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA17863970881", "shippedHoursAgo": 68, "estimatedDeliveryInHours": -1, "deliveredHoursAgo": 1,
+      "events": [
+        { "hoursAgo": 68, "location": "Örebro", "description": "Origin scan" },
+        { "hoursAgo": 1, "location": "Gävle", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10134", "customerId": "C-1041", "orderedDaysAgo": 71, "status": "DELIVERED", "statusUpdatedHoursAgo": 1610,
+    "currency": "EUR", "shippingCity": "Bremen", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 14.50 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "9KFWYKKZ", "shippedHoursAgo": 1671, "estimatedDeliveryInHours": -1597, "deliveredHoursAgo": 1610,
+      "events": [
+        { "hoursAgo": 1671, "location": "Bochum", "description": "Parcel registered" },
+        { "hoursAgo": 1616, "location": "Hannover", "description": "Departed GLS depot" },
+        { "hoursAgo": 1610, "location": "Bremen", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10135", "customerId": "C-1041", "orderedDaysAgo": 48, "status": "RETURNED", "statusUpdatedHoursAgo": 952,
+    "currency": "EUR", "shippingCity": "Bremen", "shippingCountry": "DE",
+    "items": [
+      { "sku": "SW-FIT", "name": "Fitness Watch", "quantity": 1, "unitPrice": 159.00 },
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 112.00 },
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 2, "unitPrice": 34.50 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01509337280272", "shippedHoursAgo": 1122, "estimatedDeliveryInHours": -1042, "deliveredHoursAgo": 1052,
+      "events": [
+        { "hoursAgo": 1122, "location": "Nürnberg", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 1052, "location": "Bremen", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10136", "customerId": "C-1041", "orderedDaysAgo": 19, "status": "DELIVERED", "statusUpdatedHoursAgo": 351,
+    "currency": "EUR", "shippingCity": "Bremen", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 14.50 },
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 89.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01504409179319", "shippedHoursAgo": 411, "estimatedDeliveryInHours": -358, "deliveredHoursAgo": 351,
+      "events": [
+        { "hoursAgo": 411, "location": "Kassel", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 391, "location": "Bremen", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 351, "location": "Bremen", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10137", "customerId": "C-1041", "orderedDaysAgo": 10, "status": "SHIPPED", "statusUpdatedHoursAgo": 134,
+    "currency": "EUR", "shippingCity": "Bremen", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 2, "unitPrice": 285.90 },
+      { "sku": "WB-75", "name": "Water Bottle", "quantity": 1, "unitPrice": 17.50 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0743385902477", "shippedHoursAgo": 134, "estimatedDeliveryInHours": -11,
+      "events": [
+        { "hoursAgo": 134, "location": "Leipzig", "description": "Shipment picked up" },
+        { "hoursAgo": 121, "location": "Hannover", "description": "In transit" },
+        { "hoursAgo": 11, "location": "Nürnberg", "description": "Delayed due to severe weather" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10138", "customerId": "C-1041", "orderedDaysAgo": 2, "status": "SHIPPED", "statusUpdatedHoursAgo": 38,
+    "currency": "EUR", "shippingCity": "Bremen", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MS-120", "name": "Wireless Mouse", "quantity": 2, "unitPrice": 39.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01509528480619", "shippedHoursAgo": 38, "estimatedDeliveryInHours": 60,
+      "events": [
+        { "hoursAgo": 38, "location": "Kassel", "description": "Parcel handed over to DPD" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10139", "customerId": "C-1042", "orderedDaysAgo": 100, "status": "RETURNED", "statusUpdatedHoursAgo": 2224,
+    "currency": "EUR", "shippingCity": "Rotterdam", "shippingCountry": "NL",
+    "items": [
+      { "sku": "HP-200", "name": "Noise Cancelling Headphones", "quantity": 1, "unitPrice": 219.00 },
+      { "sku": "BL-300", "name": "Blender", "quantity": 1, "unitPrice": 79.90 },
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 1, "unitPrice": 79.00 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01506997538504", "shippedHoursAgo": 2395, "estimatedDeliveryInHours": -2372, "deliveredHoursAgo": 2373,
+      "events": [
+        { "hoursAgo": 2395, "location": "Eindhoven", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 2389, "location": "Rotterdam", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 2373, "location": "Rotterdam", "description": "Delivered to parcel shop" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10140", "customerId": "C-1042", "orderedDaysAgo": 34, "status": "DELIVERED", "statusUpdatedHoursAgo": 782,
+    "currency": "EUR", "shippingCity": "Rotterdam", "shippingCountry": "NL",
+    "items": [
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 2, "unitPrice": 14.50 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD3195780176386", "shippedHoursAgo": 807, "estimatedDeliveryInHours": -792, "deliveredHoursAgo": 782,
+      "events": [
+        { "hoursAgo": 807, "location": "Eindhoven", "description": "Shipment picked up" },
+        { "hoursAgo": 792, "location": "Venlo", "description": "Departure scan" },
+        { "hoursAgo": 786, "location": "Utrecht", "description": "In transit" },
+        { "hoursAgo": 785, "location": "Rotterdam", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 782, "location": "Rotterdam", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10141", "customerId": "C-1042", "orderedDaysAgo": 15, "status": "DELIVERED", "statusUpdatedHoursAgo": 260,
+    "currency": "EUR", "shippingCity": "Rotterdam", "shippingCountry": "NL",
+    "items": [
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 1, "unitPrice": 429.00 },
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 119.00 },
+      { "sku": "KT-12", "name": "Electric Kettle", "quantity": 1, "unitPrice": 59.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD4879197720505", "shippedHoursAgo": 321, "estimatedDeliveryInHours": -245, "deliveredHoursAgo": 260,
+      "events": [
+        { "hoursAgo": 321, "location": "Eindhoven", "description": "Shipment picked up" },
+        { "hoursAgo": 307, "location": "Venlo", "description": "In transit" },
+        { "hoursAgo": 260, "location": "Rotterdam", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10142", "customerId": "C-1042", "orderedDaysAgo": 4, "status": "SHIPPED", "statusUpdatedHoursAgo": 11,
+    "currency": "EUR", "shippingCity": "Rotterdam", "shippingCountry": "NL",
+    "items": [
+      { "sku": "LMP-40", "name": "Desk Lamp", "quantity": 1, "unitPrice": 52.00 },
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 119.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA12296467350", "shippedHoursAgo": 11, "estimatedDeliveryInHours": 4,
+      "events": [
+        { "hoursAgo": 11, "location": "Venlo", "description": "Origin scan" },
+        { "hoursAgo": 9, "location": "Eindhoven", "description": "In transit" },
+        { "hoursAgo": 6, "location": "Rotterdam", "description": "Arrival scan" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10143", "customerId": "C-1043", "orderedDaysAgo": 5, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 16,
+    "currency": "SEK", "shippingCity": "Västerås", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 2, "unitPrice": 219.00 },
+      { "sku": "BG-30", "name": "Backpack 30L", "quantity": 2, "unitPrice": 899.00 },
+      { "sku": "LG-BR", "name": "Building Brick Set", "quantity": 2, "unitPrice": 689.00 }
+    ]
+  },
+  {
+    "id": "ORD-10144", "customerId": "C-1043", "orderedDaysAgo": 2, "status": "OUT_FOR_DELIVERY", "statusUpdatedHoursAgo": 2,
+    "currency": "SEK", "shippingCity": "Västerås", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 129.00 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA19630145612", "shippedHoursAgo": 41, "estimatedDeliveryInHours": 1,
+      "events": [
+        { "hoursAgo": 41, "location": "Stockholm", "description": "Origin scan" },
+        { "hoursAgo": 2, "location": "Västerås", "description": "Out for delivery" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10145", "customerId": "C-1044", "orderedDaysAgo": 92, "status": "DELIVERED", "statusUpdatedHoursAgo": 2107,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "PB-20", "name": "Power Bank 20000mAh", "quantity": 1, "unitPrice": 34.90 },
+      { "sku": "MS-120", "name": "Wireless Mouse", "quantity": 1, "unitPrice": 39.00 },
+      { "sku": "SSD-1T", "name": "Portable SSD 1TB", "quantity": 2, "unitPrice": 119.00 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "DGEXWR84", "shippedHoursAgo": 2165, "estimatedDeliveryInHours": -2091, "deliveredHoursAgo": 2107,
+      "events": [
+        { "hoursAgo": 2165, "location": "Kassel", "description": "Parcel registered" },
+        { "hoursAgo": 2145, "location": "Nürnberg", "description": "In transit" },
+        { "hoursAgo": 2107, "location": "Hannover", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10146", "customerId": "C-1044", "orderedDaysAgo": 54, "status": "DELIVERED", "statusUpdatedHoursAgo": 1182,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "MON-27", "name": "27\" Monitor", "quantity": 1, "unitPrice": 285.90 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA16534672979", "shippedHoursAgo": 1261, "estimatedDeliveryInHours": -1178, "deliveredHoursAgo": 1182,
+      "events": [
+        { "hoursAgo": 1261, "location": "Kassel", "description": "Origin scan" },
+        { "hoursAgo": 1182, "location": "Hannover", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10147", "customerId": "C-1044", "orderedDaysAgo": 42, "status": "DELIVERED", "statusUpdatedHoursAgo": 914,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 44.50 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA16346054033", "shippedHoursAgo": 990, "estimatedDeliveryInHours": -904, "deliveredHoursAgo": 914,
+      "events": [
+        { "hoursAgo": 990, "location": "Nürnberg", "description": "Origin scan" },
+        { "hoursAgo": 986, "location": "Frankfurt", "description": "Departure scan" },
+        { "hoursAgo": 960, "location": "Hannover", "description": "Arrival scan" },
+        { "hoursAgo": 914, "location": "Hannover", "description": "Delivered to neighbour" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10148", "customerId": "C-1044", "orderedDaysAgo": 6, "status": "DELIVERED", "statusUpdatedHoursAgo": 40,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DK-140", "name": "Standing Desk", "quantity": 1, "unitPrice": 449.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD5850247506980", "shippedHoursAgo": 132, "estimatedDeliveryInHours": -25, "deliveredHoursAgo": 40,
+      "events": [
+        { "hoursAgo": 132, "location": "Frankfurt", "description": "Shipment picked up" },
+        { "hoursAgo": 110, "location": "Leipzig", "description": "Departure scan" },
+        { "hoursAgo": 83, "location": "Leipzig", "description": "Departure scan" },
+        { "hoursAgo": 64, "location": "Hannover", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 40, "location": "Hannover", "description": "Delivered to parcel locker" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10149", "customerId": "C-1044", "orderedDaysAgo": 5, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 98,
+    "currency": "EUR", "shippingCity": "Hannover", "shippingCountry": "DE",
+    "items": [
+      { "sku": "SSD-1T", "name": "Portable SSD 1TB", "quantity": 1, "unitPrice": 119.00 }
+    ]
+  },
+  {
+    "id": "ORD-10150", "customerId": "C-1045", "orderedDaysAgo": 84, "status": "DELIVERED", "statusUpdatedHoursAgo": 1927,
+    "currency": "SEK", "shippingCity": "Norrköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "KB-310", "name": "Mechanical Keyboard", "quantity": 1, "unitPrice": 1290.00 },
+      { "sku": "CF-1K", "name": "Coffee Beans 1kg", "quantity": 3, "unitPrice": 219.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00377832764744206", "shippedHoursAgo": 1953, "estimatedDeliveryInHours": -1937, "deliveredHoursAgo": 1927,
+      "events": [
+        { "hoursAgo": 1953, "location": "Helsingborg", "description": "Item received by PostNord" },
+        { "hoursAgo": 1949, "location": "Örebro", "description": "In transit" },
+        { "hoursAgo": 1942, "location": "Norrköping", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 1927, "location": "Norrköping", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10151", "customerId": "C-1045", "orderedDaysAgo": 18, "status": "CANCELLED", "statusUpdatedHoursAgo": 351,
+    "currency": "SEK", "shippingCity": "Norrköping", "shippingCountry": "SE",
+    "items": [
+      { "sku": "GM-CH", "name": "Chess Set", "quantity": 1, "unitPrice": 509.00 },
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 2, "unitPrice": 790.00 }
+    ]
+  },
+  {
+    "id": "ORD-10152", "customerId": "C-1046", "orderedDaysAgo": 28, "status": "DELIVERED", "statusUpdatedHoursAgo": 558,
+    "currency": "EUR", "shippingCity": "Nürnberg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "YM-10", "name": "Yoga Mat", "quantity": 1, "unitPrice": 29.90 },
+      { "sku": "VC-RB", "name": "Robot Vacuum", "quantity": 1, "unitPrice": 299.00 }
+    ],
+    "shipment": {
+      "carrier": "DHL", "trackingNumber": "JJD0480953906497", "shippedHoursAgo": 617, "estimatedDeliveryInHours": -550, "deliveredHoursAgo": 558,
+      "events": [
+        { "hoursAgo": 617, "location": "Hannover", "description": "Shipment picked up" },
+        { "hoursAgo": 588, "location": "Nürnberg", "description": "Arrived at delivery hub" },
+        { "hoursAgo": 558, "location": "Nürnberg", "description": "Delivered to recipient" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10153", "customerId": "C-1046", "orderedDaysAgo": 23, "status": "DELIVERED", "statusUpdatedHoursAgo": 406,
+    "currency": "EUR", "shippingCity": "Nürnberg", "shippingCountry": "DE",
+    "items": [
+      { "sku": "EB-60", "name": "Wireless Earbuds", "quantity": 1, "unitPrice": 89.00 },
+      { "sku": "SSD-1T", "name": "Portable SSD 1TB", "quantity": 1, "unitPrice": 119.00 }
+    ],
+    "shipment": {
+      "carrier": "GLS", "trackingNumber": "RUEKHW1J", "shippedHoursAgo": 488, "estimatedDeliveryInHours": -416, "deliveredHoursAgo": 406,
+      "events": [
+        { "hoursAgo": 488, "location": "Hannover", "description": "Parcel registered" },
+        { "hoursAgo": 406, "location": "Nürnberg", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10154", "customerId": "C-1047", "orderedDaysAgo": 112, "status": "DELIVERED", "statusUpdatedHoursAgo": 2585,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "BK-102", "name": "Paperback Novel", "quantity": 1, "unitPrice": 149.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00372929974352690", "shippedHoursAgo": 2681, "estimatedDeliveryInHours": -2591, "deliveredHoursAgo": 2585,
+      "events": [
+        { "hoursAgo": 2681, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 2635, "location": "Lund", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 2585, "location": "Lund", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10155", "customerId": "C-1047", "orderedDaysAgo": 94, "status": "DELIVERED", "statusUpdatedHoursAgo": 2114,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 3990.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00376366950669268", "shippedHoursAgo": 2198, "estimatedDeliveryInHours": -2107, "deliveredHoursAgo": 2114,
+      "events": [
+        { "hoursAgo": 2198, "location": "Stockholm", "description": "Item received by PostNord" },
+        { "hoursAgo": 2156, "location": "Lund", "description": "Arrived at sorting terminal" },
+        { "hoursAgo": 2114, "location": "Lund", "description": "Delivered to service point" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10156", "customerId": "C-1047", "orderedDaysAgo": 78, "status": "DELIVERED", "statusUpdatedHoursAgo": 1784,
+    "currency": "SEK", "shippingCity": "Lund", "shippingCountry": "SE",
+    "items": [
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 1, "unitPrice": 3990.00 },
+      { "sku": "PL-03", "name": "Plant Pot Set", "quantity": 1, "unitPrice": 399.00 }
+    ],
+    "shipment": {
+      "carrier": "POSTNORD", "trackingNumber": "00370412650427169", "shippedHoursAgo": 1844, "estimatedDeliveryInHours": -1783, "deliveredHoursAgo": 1784,
+      "events": [
+        { "hoursAgo": 1844, "location": "Helsingborg", "description": "Item received by PostNord" },
+        { "hoursAgo": 1815, "location": "Stockholm", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1801, "location": "Örebro", "description": "Departed sorting terminal" },
+        { "hoursAgo": 1790, "location": "Örebro", "description": "In transit" },
+        { "hoursAgo": 1784, "location": "Lund", "description": "Delivered to mailbox" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10157", "customerId": "C-1048", "orderedDaysAgo": 34, "status": "DELIVERED", "statusUpdatedHoursAgo": 712,
+    "currency": "EUR", "shippingCity": "Bonn", "shippingCountry": "DE",
+    "items": [
+      { "sku": "TB-11", "name": "Tablet 11\"", "quantity": 2, "unitPrice": 429.00 },
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 3, "unitPrice": 69.00 },
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 },
+      { "sku": "CB-USB", "name": "USB-C Cable 2m", "quantity": 1, "unitPrice": 11.50 }
+    ],
+    "shipment": {
+      "carrier": "DPD", "trackingNumber": "01508769415869", "shippedHoursAgo": 769, "estimatedDeliveryInHours": -717, "deliveredHoursAgo": 712,
+      "events": [
+        { "hoursAgo": 769, "location": "Bochum", "description": "Parcel handed over to DPD" },
+        { "hoursAgo": 721, "location": "Bonn", "description": "Arrived at parcel centre" },
+        { "hoursAgo": 712, "location": "Bonn", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10158", "customerId": "C-1048", "orderedDaysAgo": 2, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 17,
+    "currency": "EUR", "shippingCity": "Bonn", "shippingCountry": "DE",
+    "items": [
+      { "sku": "YM-10", "name": "Yoga Mat", "quantity": 1, "unitPrice": 29.90 },
+      { "sku": "SB-10", "name": "Sleeping Bag", "quantity": 3, "unitPrice": 103.50 }
+    ]
+  },
+  {
+    "id": "ORD-10159", "customerId": "C-1049", "orderedDaysAgo": 6, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 93,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "DB-20", "name": "Dumbbell Set 20kg", "quantity": 1, "unitPrice": 679.00 }
+    ]
+  },
+  {
+    "id": "ORD-10160", "customerId": "C-1049", "orderedDaysAgo": 5, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 13,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "MG-02", "name": "Coffee Mug", "quantity": 2, "unitPrice": 114.00 }
+    ]
+  },
+  {
+    "id": "ORD-10161", "customerId": "C-1049", "orderedDaysAgo": 2, "status": "IN_PREPARATION", "statusUpdatedHoursAgo": 36,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "FL-JK", "name": "Fleece Jacket", "quantity": 1, "unitPrice": 899.00 },
+      { "sku": "TE-SET", "name": "Tea Sampler", "quantity": 1, "unitPrice": 169.00 }
+    ]
+  },
+  {
+    "id": "ORD-10162", "customerId": "C-1049", "orderedDaysAgo": 0, "status": "PAYMENT_PENDING", "statusUpdatedHoursAgo": 9,
+    "currency": "SEK", "shippingCity": "Karlstad", "shippingCountry": "SE",
+    "items": [
+      { "sku": "RN-SH", "name": "Running Shoes", "quantity": 1, "unitPrice": 1390.00 },
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 1, "unitPrice": 790.00 },
+      { "sku": "SB-10", "name": "Sleeping Bag", "quantity": 2, "unitPrice": 1190.00 }
+    ]
+  },
+  {
+    "id": "ORD-10163", "customerId": "C-1050", "orderedDaysAgo": 111, "status": "DELIVERED", "statusUpdatedHoursAgo": 2563,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "WL-01", "name": "Wool Beanie", "quantity": 1, "unitPrice": 19.90 }
+    ],
+    "shipment": {
+      "carrier": "UPS", "trackingNumber": "1Z999AA17494266269", "shippedHoursAgo": 2625, "estimatedDeliveryInHours": -2543, "deliveredHoursAgo": 2563,
+      "events": [
+        { "hoursAgo": 2625, "location": "Kassel", "description": "Origin scan" },
+        { "hoursAgo": 2566, "location": "Dortmund", "description": "Arrival scan" },
+        { "hoursAgo": 2563, "location": "Dortmund", "description": "Delivered" }
+      ]
+    }
+  },
+  {
+    "id": "ORD-10164", "customerId": "C-1050", "orderedDaysAgo": 75, "status": "CANCELLED", "statusUpdatedHoursAgo": 1732,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "DV-LIN", "name": "Linen Duvet Cover", "quantity": 2, "unitPrice": 69.00 },
+      { "sku": "CM-900", "name": "Espresso Machine", "quantity": 2, "unitPrice": 349.00 }
+    ]
+  },
+  {
+    "id": "ORD-10165", "customerId": "C-1050", "orderedDaysAgo": 11, "status": "ON_HOLD", "statusUpdatedHoursAgo": 241,
+    "currency": "EUR", "shippingCity": "Dortmund", "shippingCountry": "DE",
+    "items": [
+      { "sku": "WC-1080", "name": "HD Webcam", "quantity": 1, "unitPrice": 69.00 }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Customers')}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('customers')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar('Customers', ${#lists.size(customers)} + ' customers')}"></header>
+        <section class="content">
+            <div class="card">
+                <form class="filter" th:action="@{/customers}" method="get">
+                    <input type="search" name="q" th:value="${q}" placeholder="Filter by id, name or email">
+                    <button type="submit" class="button">Filter</button>
+                    <a th:if="${!#strings.isEmpty(q)}" class="link" th:href="@{/customers}">Clear</a>
+                </form>
+                <table class="table" th:unless="${#lists.isEmpty(customers)}">
+                    <thead><tr><th>Customer</th><th>Contact</th><th>Channel</th><th>Tier</th><th class="num">Orders</th><th class="num">Open</th><th>Last order</th></tr></thead>
+                    <tbody>
+                    <tr th:each="row : ${customers}" class="clickable" th:attr="data-href=@{/customers/{id}(id=${row.customer.id})}">
+                        <td>
+                            <a class="strong" th:href="@{/customers/{id}(id=${row.customer.id})}" th:text="${row.customer.name}"></a>
+                            <div class="mono muted small" th:text="${row.customer.id}"></div>
+                        </td>
+                        <td><div th:text="${row.customer.email}"></div><div class="muted small" th:text="${row.customer.phone}"></div></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${row.customer.preferredChannel})}"></span></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${row.customer.tier})}"></span></td>
+                        <td class="num" th:text="${row.orders}"></td>
+                        <td class="num" th:text="${row.openOrders}"></td>
+                        <td class="muted" th:text="${row.lastOrderDate != null} ? ${#temporals.format(row.lastOrderDate, 'd MMM yyyy')} : '—'"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="empty" th:if="${#lists.isEmpty(customers)}">No customer matches <strong th:text="${q}"></strong>.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+<script>
+    document.querySelectorAll('tr.clickable').forEach(row =>
+        row.addEventListener('click', event => { if (!event.target.closest('a')) location.href = row.dataset.href; }));
+</script>
+</body>
+</html>

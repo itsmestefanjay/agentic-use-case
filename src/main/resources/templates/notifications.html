@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Notifications')}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('notifications')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar('Notifications', 'Messages the AI agent sent to customers')}"></header>
+        <section class="content">
+            <div class="card">
+                <div class="card-head">
+                    <h2>Sent messages</h2>
+                    <span class="live"><span class="pulse"></span>Live · refreshes every 10 s</span>
+                </div>
+                <table class="table" th:unless="${#lists.isEmpty(notifications)}">
+                    <thead><tr><th>Sent</th><th>Customer</th><th>Channel</th><th>Recipient</th><th>Order status</th><th>Message</th></tr></thead>
+                    <tbody>
+                    <tr th:each="row : ${notifications}" th:with="n=${row.notification}">
+                        <td class="nowrap muted" th:text="${#temporals.format(n.sentAt, 'd MMM, HH:mm:ss')}"></td>
+                        <td class="nowrap">
+                            <a th:if="${row.customer != null}" th:href="@{/customers/{id}(id=${row.customer.id})}" th:text="${row.customer.name}"></a>
+                            <span th:if="${row.customer == null}" class="muted">Unknown</span>
+                        </td>
+                        <td><span th:replace="~{fragments/layout :: badge(${n.channel})}"></span></td>
+                        <td class="muted nowrap" th:text="${n.recipient != null} ? ${n.recipient} : 'Customer portal'"></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${n.orderStatus})}"></span></td>
+                        <td class="message" th:text="${n.message}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="empty" th:if="${#lists.isEmpty(notifications)}">
+                    No notifications yet. They appear here when the agent calls <code>inform-customer</code>.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+<script>
+    setTimeout(() => { if (document.activeElement?.tagName !== 'INPUT') location.reload(); }, 10000);
+</script>
+</body>
+</html>

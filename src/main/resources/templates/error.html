@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Not found')}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar(${status == 404} ? 'Not found' : 'Something went wrong', null)}"></header>
+        <section class="content">
+            <div class="card">
+                <p class="empty">
+                    <strong th:text="${status}">404</strong> ·
+                    <span th:text="${status == 404} ? 'This customer or order does not exist.' : ${error}"></span>
+                    <br><a class="link" th:href="@{/}">Back to the dashboard</a>
+                </p>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>

@@ -1,51 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="58e2692" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="5acd1b5" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.10.0">
   <bpmn:process id="AgenticOrchestration" name="Agentic Orchestration" isExecutable="true">
     <bpmn:extensionElements>
       <zeebe:versionTag value="8.8-alpha5" />
     </bpmn:extensionElements>
     <bpmn:startEvent id="StartEvent_1" name="Find order status">
       <bpmn:extensionElements>
-        <zeebe:formDefinition formId="find-order-status-07gbavp" />
+        <zeebe:formDefinition formId="find-order-status-1q64g3e" />
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_0nfbgwl</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_0nfbgwl" sourceRef="StartEvent_1" targetRef="Activity_1c7hph6" />
-    <bpmn:exclusiveGateway id="Gateway_0llayud">
-      <bpmn:incoming>Flow_1ltx0qo</bpmn:incoming>
-      <bpmn:incoming>Flow_1r8hstg</bpmn:incoming>
-      <bpmn:outgoing>Flow_0oxn679</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_0oxn679" sourceRef="Gateway_0llayud" targetRef="OrderBot" />
-    <bpmn:exclusiveGateway id="Gateway_1j3mdd6" name="Should I run more tools?" default="Flow_0kow2g8">
-      <bpmn:incoming>Flow_0k7qsl5</bpmn:incoming>
-      <bpmn:outgoing>Flow_0kow2g8</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0h6r8e6</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_0k7qsl5" sourceRef="OrderBot" targetRef="Gateway_1j3mdd6" />
     <bpmn:endEvent id="Event_0yvpec5" name="Request resolved">
-      <bpmn:incoming>Flow_0kow2g8</bpmn:incoming>
+      <bpmn:incoming>Flow_1oeqlxl</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_0kow2g8" name="no" sourceRef="Gateway_1j3mdd6" targetRef="Event_0yvpec5" />
-    <bpmn:adHocSubProcess id="orderTools" name="Order Tools">
+    <bpmn:scriptTask id="Activity_1c7hph6" name="create user prompt">
       <bpmn:extensionElements>
-        <zeebe:adHoc activeElementsCollection="=[toolCall._meta.name]" />
+        <zeebe:script expression="={ &#10;  name: string(get or else(name, &#34;&#34;)),&#10;  orderDate: string(get or else(orderDate, &#34;&#34;)),&#10;  customerId: string(get or else(customerId, &#34;&#34;)),&#10;  providedOrderId: string(get or else(providedOrderId, &#34;&#34;)),&#10;  prompt: &#34;I&#39;m &#34;+name+&#34; and I want to get the status of my order. The order date was &#34;+orderDate+ &#34;, my customer id is &#34;+customerId+ &#34;, my orderId is &#39;&#34;+providedOrderId+&#34;&#39;&#34; &#10;}" resultVariable="prompt" />
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0h6r8e6</bpmn:incoming>
-      <bpmn:outgoing>Flow_0xmt7y5</bpmn:outgoing>
-      <bpmn:multiInstanceLoopCharacteristics>
-        <bpmn:extensionElements>
-          <zeebe:loopCharacteristics inputCollection="=agent.toolCalls" inputElement="toolCall" outputCollection="toolCallResults" outputElement="={&#10;  id: toolCall._meta.id, &#10;  name: toolCall._meta.name, &#10;  content: toolCallResult&#10;}" />
-        </bpmn:extensionElements>
-      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:incoming>Flow_0nfbgwl</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cir26w</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_0cir26w" sourceRef="Activity_1c7hph6" targetRef="orderTools" />
+    <bpmn:sequenceFlow id="Flow_1oeqlxl" sourceRef="orderTools" targetRef="Event_0yvpec5" />
+    <bpmn:adHocSubProcess id="orderTools" name="Order Tools" zeebe:modelerTemplate="io.camunda.connectors.agenticai.ai-agent-subprocess.v2" zeebe:modelerTemplateVersion="1" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNBNTZFRkYiLz4KPG1hc2sgaWQ9InBhdGgtMi1vdXRzaWRlLTFfMTg1XzYiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjQiIHk9IjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iYmxhY2siPgo8cmVjdCBmaWxsPSJ3aGl0ZSIgeD0iNCIgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIvPgo8L21hc2s+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC4wMTA1IDEyLjA5ODdDMTguNDkgMTAuNTg5NCAxNy4xNTk0IDguMTA4MTQgMTYuMTc5OSA2LjAxMTAzQzE2LjE1MiA2LjAwNDUxIDE2LjExNzYgNiAxNi4wNzk0IDZDMTYuMDQxMSA2IDE2LjAwNjYgNi4wMDQ1MSAxNS45Nzg4IDYuMDExMDRDMTQuOTk5NCA4LjEwODE0IDEzLjY2OTcgMTAuNTg4OSAxMi4xNDgxIDEyLjA5ODFDMTAuNjI2OSAxMy42MDcxIDguMTI1NjggMTQuOTI2NCA2LjAxMTU3IDE1Ljg5ODFDNi4wMDQ3NCAxNS45MjYxIDYgMTUuOTYxMSA2IDE2QzYgMTYuMDM4NyA2LjAwNDY4IDE2LjA3MzYgNi4wMTE0NCAxNi4xMDE0QzguMTI1MTkgMTcuMDcyOSAxMC42MjYyIDE4LjM5MTkgMTIuMTQ3NyAxOS45MDE2QzEzLjY2OTcgMjEuNDEwNyAxNC45OTk2IDIzLjg5MiAxNS45NzkxIDI1Ljk4OUMxNi4wMDY4IDI1Ljk5NTYgMTYuMDQxMSAyNiAxNi4wNzkzIDI2QzE2LjExNzUgMjYgMTYuMTUxOSAyNS45OTU0IDE2LjE3OTYgMjUuOTg5QzE3LjE1OTEgMjMuODkyIDE4LjQ4ODggMjEuNDExIDIwLjAwOTkgMTkuOTAyMU0yMC4wMDk5IDE5LjkwMjFDMjEuNTI1MyAxOC4zOTg3IDIzLjk0NjUgMTcuMDY2OSAyNS45OTE1IDE2LjA4MjRDMjUuOTk2NSAxNi4wNTkzIDI2IDE2LjAzMSAyNiAxNS45OTk3QzI2IDE1Ljk2ODQgMjUuOTk2NSAxNS45NDAzIDI1Ljk5MTUgMTUuOTE3MUMyMy45NDc0IDE0LjkzMjcgMjEuNTI1OSAxMy42MDEgMjAuMDEwNSAxMi4wOTg3IiBzdHJva2U9IiM0OTFEOEIiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgbWFzaz0idXJsKCNwYXRoLTItb3V0c2lkZS0xXzE4NV82KSIvPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:input source="bedrock" target="provider.type" />
+          <zeebe:input source="eu-central-1" target="provider.bedrock.region" />
+          <zeebe:input source="credentials" target="provider.bedrock.authentication.type" />
+          <zeebe:input source="=camunda.secrets.AWS_BEDROCK_ACCESS_KEY_SSH" target="provider.bedrock.authentication.accessKey" />
+          <zeebe:input source="=camunda.secrets.AWS_BEDROCK_SECRET_KEY_SSH" target="provider.bedrock.authentication.secretKey" />
+          <zeebe:input source="eu.anthropic.claude-opus-4-6-v1" target="provider.bedrock.model.model" />
+          <zeebe:input source="=true" target="provider.bedrock.model.parameters.promptCaching.enabled" />
+          <zeebe:input source="=1000" target="provider.bedrock.model.parameters.maxTokens" />
+          <zeebe:input source="=&#34;You are **TaskAgent**, a helpful, generic chat agent that can handle a wide variety of customer requests using your own domain knowledge **and** any tools explicitly provided to you at runtime.&#10;&#10;If tools are provided, you should prefer them instead of guessing an answer. You can call the same tool multiple times by providing different input values. Don&#39;t guess any tools which were not explicitly configured. If no tool matches the request, try to generate an answer. If you&#39;re not able to find a good answer, return with a message stating why you&#39;re not able to.&#10;&#10;Wrap minimal, inspectable reasoning in *exactly* this XML template:&#10;&#10;&#60;thinking&#62;&#10;&#60;context&#62;…briefly state the customer’s need and current state…&#60;/context&#62;&#10;&#60;reflection&#62;…list candidate tools, justify which you will call next and why…&#60;/reflection&#62;&#10;&#60;/thinking&#62;&#10;&#10;Reveal **no** additional private reasoning outside these tags.&#34;" target="data.systemPrompt.prompt" />
+          <zeebe:input source="=prompt.prompt" target="data.userPrompt.prompt" />
+          <zeebe:input target="agentContext" />
+          <zeebe:input source="in-process" target="data.memory.storage.type" />
+          <zeebe:input source="=20" target="data.memory.contextWindowSize" />
+          <zeebe:input source="=10" target="data.limits.maxModelCalls" />
+          <zeebe:input source="WAIT_FOR_TOOL_CALL_RESULTS" target="data.events.behavior" />
+          <zeebe:input source="text" target="data.response.format.type" />
+          <zeebe:input source="=false" target="data.response.format.parseJson" />
+          <zeebe:input source="=false" target="data.response.includeAssistantMessage" />
+          <zeebe:input source="=false" target="data.response.includeAgentContext" />
+          <zeebe:input target="agent" />
+          <zeebe:output source="=agent" target="agent" />
+        </zeebe:ioMapping>
+        <zeebe:properties>
+          <zeebe:property name="io.camunda.agenticai.toolContainer" value="true" />
+        </zeebe:properties>
+        <zeebe:taskDefinition type="io.camunda.agenticai:aiagent:subprocess:2" retries="3" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="elementTemplateVersion" value="1" />
+          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.agenticai.ai-agent-subprocess.v2" />
+          <zeebe:header key="retryBackoff" value="PT30S" />
+        </zeebe:taskHeaders>
+        <zeebe:adHoc outputCollection="toolCallResults" outputElement="={&#10;  id: toolCall._meta.id,&#10;  name: toolCall._meta.name,&#10;  content: toolCallResult,&#10;  completedAt: now()&#10;}" />
+        <zeebe:agentDefinition agentType="aiAgentSubProcess" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0cir26w</bpmn:incoming>
+      <bpmn:outgoing>Flow_1oeqlxl</bpmn:outgoing>
       <bpmn:userTask id="ask_support" name="ask support rep">
         <bpmn:documentation>This task assigns an expert which does the work for you if you cannot find anything about the order.</bpmn:documentation>
         <bpmn:extensionElements>
           <zeebe:userTask />
-          <zeebe:formDefinition formId="ask-support-rep-0w0oj6m" />
+          <zeebe:formDefinition formId="ask-support-rep-1s5myyr" />
           <zeebe:assignmentDefinition assignee="" />
           <zeebe:ioMapping>
-            <zeebe:input source="={&#10;  providedOrderId: fromAi(toolCall.providedOrderId, &#34;the orderId provided by the customer or null if not set&#34;, &#34;string&#34;),&#10;  foundOrderId: fromAi(toolCall.foundOrderId, &#34;the orderId we found in the system or null&#34;, &#34;string&#34;),&#10;  customerId: fromAi(toolCall.customerId, &#34;the customerId provided by the customer&#34;, &#34;string&#34;),&#10;  orderDate: fromAi(toolCall.orderDate, &#34;the orderDate provided by the customer&#34;, &#34;string&#34;),&#10;  message: fromAi(toolCall.orderId, &#34;a nice short message asking the rep for help finding the order&#34;, &#34;string&#34;)&#10;}" target="orderInfo" />
+            <zeebe:input source="={&#10;  providedOrderId: fromAi(toolCall.providedOrderId, &#34;the orderId provided by the customer or null if not set&#34;, &#34;string&#34;),&#10;  foundOrderId: fromAi(toolCall.foundOrderId, &#34;the orderId we found in the system or null&#34;, &#34;string&#34;),&#10;  customerId: fromAi(toolCall.customerId, &#34;the customerId provided by the customer&#34;, &#34;string&#34;),&#10;  orderDate: fromAi(toolCall.orderDate, &#34;the orderDate provided by the customer&#34;, &#34;string&#34;),&#10;  message: fromAi(toolCall.message, &#34;a nice short message asking the rep for help finding the order&#34;, &#34;string&#34;)&#10;}" target="orderInfo" />
             <zeebe:output source="={&#10;  foundOrderId: orderId,&#10;  orderStatus: orderStatus,&#10;  comment: comment&#10;}" target="toolCallResult" />
           </zeebe:ioMapping>
         </bpmn:extensionElements>
@@ -90,59 +114,17 @@
           </zeebe:ioMapping>
         </bpmn:extensionElements>
       </bpmn:serviceTask>
+      <bpmn:serviceTask id="verify_customer" name="verify customer">
+        <bpmn:documentation>This tool verifies that a customer exists by customerId and checks whether the given name matches the registered customer. Use it before sharing any order details.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="verify-customer" />
+          <zeebe:ioMapping>
+            <zeebe:input source="={&#10;  customerId: fromAi(toolCall.customerId, &#34;the customer id provided by the customer&#34;, &#34;string&#34;),&#10;  name: fromAi(toolCall.name, &#34;the name of the customer from the request or an empty string&#34;, &#34;string&#34;)&#10;}" target="customerInfo" />
+            <zeebe:output source="={&#10;  customerExists: customerExists,&#10;  customerId: customerId,&#10;  nameMatches: nameMatches,&#10;  tier: tier,&#10;  message: message&#10;}" target="toolCallResult" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
     </bpmn:adHocSubProcess>
-    <bpmn:sequenceFlow id="Flow_0h6r8e6" name="yes" sourceRef="Gateway_1j3mdd6" targetRef="orderTools">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(agent.toolCalls = null) and count(agent.toolCalls) &gt; 0</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0xmt7y5" sourceRef="orderTools" targetRef="Event_15qxhyp" />
-    <bpmn:serviceTask id="OrderBot" name="help customer with order" zeebe:modelerTemplate="277672dc-e460-43e8-b397-54b8c7f7c5db" zeebe:modelerTemplateVersion="1750767792096" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNBNTZFRkYiLz4KPG1hc2sgaWQ9InBhdGgtMi1vdXRzaWRlLTFfMTg1XzYiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjQiIHk9IjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iYmxhY2siPgo8cmVjdCBmaWxsPSJ3aGl0ZSIgeD0iNCIgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIvPgo8L21hc2s+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC4wMTA1IDEyLjA5ODdDMTguNDkgMTAuNTg5NCAxNy4xNTk0IDguMTA4MTQgMTYuMTc5OSA2LjAxMTAzQzE2LjE1MiA2LjAwNDUxIDE2LjExNzYgNiAxNi4wNzk0IDZDMTYuMDQxMSA2IDE2LjAwNjYgNi4wMDQ1MSAxNS45Nzg4IDYuMDExMDRDMTQuOTk5NCA4LjEwODE0IDEzLjY2OTcgMTAuNTg4OSAxMi4xNDgxIDEyLjA5ODFDMTAuNjI2OSAxMy42MDcxIDguMTI1NjggMTQuOTI2NCA2LjAxMTU3IDE1Ljg5ODFDNi4wMDQ3NCAxNS45MjYxIDYgMTUuOTYxMSA2IDE2QzYgMTYuMDM4NyA2LjAwNDY4IDE2LjA3MzYgNi4wMTE0NCAxNi4xMDE0QzguMTI1MTkgMTcuMDcyOSAxMC42MjYyIDE4LjM5MTkgMTIuMTQ3NyAxOS45MDE2QzEzLjY2OTcgMjEuNDEwNyAxNC45OTk2IDIzLjg5MiAxNS45NzkxIDI1Ljk4OUMxNi4wMDY4IDI1Ljk5NTYgMTYuMDQxMSAyNiAxNi4wNzkzIDI2QzE2LjExNzUgMjYgMTYuMTUxOSAyNS45OTU0IDE2LjE3OTYgMjUuOTg5QzE3LjE1OTEgMjMuODkyIDE4LjQ4ODggMjEuNDExIDIwLjAwOTkgMTkuOTAyMU0yMC4wMDk5IDE5LjkwMjFDMjEuNTI1MyAxOC4zOTg3IDIzLjk0NjUgMTcuMDY2OSAyNS45OTE1IDE2LjA4MjRDMjUuOTk2NSAxNi4wNTkzIDI2IDE2LjAzMSAyNiAxNS45OTk3QzI2IDE1Ljk2ODQgMjUuOTk2NSAxNS45NDAzIDI1Ljk5MTUgMTUuOTE3MUMyMy45NDc0IDE0LjkzMjcgMjEuNTI1OSAxMy42MDEgMjAuMDEwNSAxMi4wOTg3IiBzdHJva2U9IiM0OTFEOEIiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgbWFzaz0idXJsKCNwYXRoLTItb3V0c2lkZS0xXzE4NV82KSIvPgo8L3N2Zz4K">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="io.camunda.agenticai:aiagent:1" retries="3" />
-        <zeebe:ioMapping>
-          <zeebe:input source="bedrock" target="provider.type" />
-          <zeebe:input source="eu-central-1" target="provider.bedrock.region" />
-          <zeebe:input source="credentials" target="provider.bedrock.authentication.type" />
-          <zeebe:input source="{{ secrets.AWS_ACCESS_KEY }}" target="provider.bedrock.authentication.accessKey" />
-          <zeebe:input source="{{ secrets.AWS_SECRET_KEY }}" target="provider.bedrock.authentication.secretKey" />
-          <zeebe:input source="anthropic.claude-3-haiku-20240307-v1:0" target="provider.bedrock.model.model" />
-          <zeebe:input source="=1000" target="provider.bedrock.model.parameters.maxTokens" />
-          <zeebe:input source="You are OrderStatusAgent, a task-oriented assistant specialized in identifying and communicating the status of customer orders. You operate within a tool-based execution environment and are strictly forbidden from asking the customer for additional information. Every incoming message is from a customer. All internal collaboration must go through the ask support tool.&#10;&#10;## Operating Protocol&#10;&#10;### Inspect and Select Tools:&#10;For every request, first analyze all available tools. Evaluate their relevance to the task and determine the most appropriate one based on the available data (e.g., customer number, order ID, order date).&#10;### Tool Execution:&#10;- Always attempt to identify the order and the status using all relevant tools, such as search order, get order status, or find tracking info.&#10;- Try all reasonable parameter combinations from the message (e.g., order ID, customer number).&#10;- Only call each tool once. Do not retry failed calls.&#10;&#10;### Escalation Rules:&#10;&#10;- If no tool returns a result, escalate using ask_support.&#10;- After escalation, do not re-search using tools. Use only the data returned by the expert.&#10;- If the expert confirms the order cannot be found, respond to the customer with a polite message stating the order cannot be located and advise calling the hotline.&#10;&#10;### Customer Response Rules:&#10;&#10;- Only respond to the customer after calling at least one relevant tool or receiving expert input.&#10;- Once a message has been sent to the customer, terminate the process immediately (no further tool calls or steps).&#10;- If the order is found and has shipped, include: Tracking number, Shipping provider, Estimated delivery date/time (adjusted to CEST)&#10;- Do not include tracking information if the order has not shipped yet.&#10;&#10;### Accuracy Requirements:&#10;&#10;- Never fabricate or guess order data.&#10;- Never use general knowledge.&#10;- All information must come from tools or expert input.&#10;&#10;## Reasoning Format&#10;&#10;Before every tool call, you must output structured reasoning using the following XML format:&#10;&#10;&#60;reasoning&#62;&#60;thinking&#62;Brief analysis of the customer request&#60;/thinking&#62;&#60;context&#62;Structured summary of all relevant data available&#60;/context&#62;&#60;reflection&#62;Justification of which tool to use next and why&#60;/reflection&#62;&#60;/reasoning&#62;&#10;&#10;Do not include internal notes outside of this structure. Use precise, actionable reflections to guide the tool invocation." target="data.systemPrompt.prompt" />
-          <zeebe:input source="=prompt.prompt" target="data.userPrompt.prompt" />
-          <zeebe:input source="orderTools" target="data.tools.containerElementId" />
-          <zeebe:input source="=toolCallResults" target="data.tools.toolCallResults" />
-          <zeebe:input source="=agent.context" target="data.context" />
-          <zeebe:input source="=20" target="data.memory.maxMessages" />
-          <zeebe:input source="=10" target="data.limits.maxModelCalls" />
-          <zeebe:input source="json" target="data.response.format.type" />
-          <zeebe:input source="Response" target="data.response.format.schemaName" />
-          <zeebe:input source="=false" target="data.response.includeAssistantMessage" />
-        </zeebe:ioMapping>
-        <zeebe:taskHeaders>
-          <zeebe:header key="elementTemplateVersion" value="1" />
-          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.agenticai.aiagent.v1" />
-          <zeebe:header key="resultVariable" value="agent" />
-          <zeebe:header key="retryBackoff" value="PT10S" />
-        </zeebe:taskHeaders>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0oxn679</bpmn:incoming>
-      <bpmn:outgoing>Flow_0k7qsl5</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_1ltx0qo" sourceRef="Activity_1c7hph6" targetRef="Gateway_0llayud" />
-    <bpmn:scriptTask id="Activity_1c7hph6" name="create user prompt">
-      <bpmn:extensionElements>
-        <zeebe:script expression="={ prompt: &#34;I want to get the status of my order. The order date was &#34; + string(orderDate) + &#34;, my customer id is &#34;+string(customerId) + &#34;, my orderId is &#39;&#34;+string(providedOrderId)+&#34;&#39;&#34; }" resultVariable="prompt" />
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0nfbgwl</bpmn:incoming>
-      <bpmn:outgoing>Flow_1ltx0qo</bpmn:outgoing>
-    </bpmn:scriptTask>
-    <bpmn:sequenceFlow id="Flow_1r8hstg" sourceRef="Event_15qxhyp" targetRef="Gateway_0llayud" />
-    <bpmn:intermediateCatchEvent id="Event_15qxhyp" name="10 seconds">
-      <bpmn:incoming>Flow_0xmt7y5</bpmn:incoming>
-      <bpmn:outgoing>Flow_1r8hstg</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_0sn3cgl">
-        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT10S</bpmn:timeDuration>
-      </bpmn:timerEventDefinition>
-    </bpmn:intermediateCatchEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="AgenticOrchestration">
@@ -150,15 +132,6 @@
         <dc:Bounds x="192" y="100" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="169" y="143" width="83" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0llayud_di" bpmnElement="Gateway_0llayud" isMarkerVisible="true">
-        <dc:Bounds x="415" y="93" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1j3mdd6_di" bpmnElement="Gateway_1j3mdd6" isMarkerVisible="true">
-        <dc:Bounds x="755" y="93" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="737" y="63" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0yvpec5_di" bpmnElement="Event_0yvpec5">
@@ -171,74 +144,40 @@
         <dc:Bounds x="280" y="78" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1t5zoyo_di" bpmnElement="Event_15qxhyp">
-        <dc:Bounds x="422" y="192" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="471" y="203" width="57" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19az2m4_di" bpmnElement="OrderBot">
-        <dc:Bounds x="570" y="78" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05a3p5a_di" bpmnElement="orderTools" isExpanded="true">
-        <dc:Bounds x="400" y="270" width="440" height="290" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="Activity_08epsxa_di" bpmnElement="orderTools" isExpanded="true">
+        <dc:Bounds x="430" y="-27" width="440" height="290" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0ot3d7a_di" bpmnElement="ask_support">
-        <dc:Bounds x="430" y="420" width="100" height="80" />
+        <dc:Bounds x="460" y="123" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0m9i0b1_di" bpmnElement="search_order">
-        <dc:Bounds x="430" y="300" width="100" height="80" />
+        <dc:Bounds x="460" y="3" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1rjs12s_di" bpmnElement="reply_to_customer">
-        <dc:Bounds x="570" y="300" width="100" height="80" />
+        <dc:Bounds x="600" y="3" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_03pfae2_di" bpmnElement="get_order_status">
-        <dc:Bounds x="570" y="420" width="100" height="80" />
+        <dc:Bounds x="600" y="123" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_112l1ou_di" bpmnElement="find_tracking_info">
-        <dc:Bounds x="710" y="300" width="100" height="80" />
+        <dc:Bounds x="740" y="3" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_verify_customer_di" bpmnElement="verify_customer">
+        <dc:Bounds x="740" y="123" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0nfbgwl_di" bpmnElement="Flow_0nfbgwl">
         <di:waypoint x="228" y="118" />
         <di:waypoint x="280" y="118" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0oxn679_di" bpmnElement="Flow_0oxn679">
-        <di:waypoint x="465" y="118" />
-        <di:waypoint x="570" y="118" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0k7qsl5_di" bpmnElement="Flow_0k7qsl5">
-        <di:waypoint x="670" y="118" />
-        <di:waypoint x="755" y="118" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0kow2g8_di" bpmnElement="Flow_0kow2g8">
-        <di:waypoint x="805" y="118" />
-        <di:waypoint x="982" y="118" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="843" y="100" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0h6r8e6_di" bpmnElement="Flow_0h6r8e6">
-        <di:waypoint x="780" y="143" />
-        <di:waypoint x="780" y="270" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="786" y="163" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0xmt7y5_di" bpmnElement="Flow_0xmt7y5">
-        <di:waypoint x="440" y="270" />
-        <di:waypoint x="440" y="228" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1ltx0qo_di" bpmnElement="Flow_1ltx0qo">
+      <bpmndi:BPMNEdge id="Flow_0cir26w_di" bpmnElement="Flow_0cir26w">
         <di:waypoint x="380" y="118" />
-        <di:waypoint x="415" y="118" />
+        <di:waypoint x="430" y="118" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1r8hstg_di" bpmnElement="Flow_1r8hstg">
-        <di:waypoint x="440" y="192" />
-        <di:waypoint x="440" y="143" />
+      <bpmndi:BPMNEdge id="Flow_1oeqlxl_di" bpmnElement="Flow_1oeqlxl">
+        <di:waypoint x="870" y="118" />
+        <di:waypoint x="982" y="118" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

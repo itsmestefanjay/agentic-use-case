@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Dashboard')}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('dashboard')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar('Dashboard', 'What needs your attention right now')}"></header>
+        <section class="content" th:with="d=${dashboard}">
+
+            <div class="kpis">
+                <a class="kpi" th:href="@{/customers}">
+                <span class="kpi-label">Customers</span>
+                <span class="kpi-value" th:text="${d.customers}">0</span>
+                </a>
+                <a class="kpi" th:href="@{/orders}">
+                <span class="kpi-label">Open orders</span>
+                <span class="kpi-value" th:text="${d.openOrders}">0</span>
+                </a>
+                <a class="kpi" th:href="@{/orders(status='SHIPPED')}">
+                <span class="kpi-label">In transit</span>
+                <span class="kpi-value" th:text="${d.inTransit}">0</span>
+                </a>
+                <div class="kpi" th:classappend="${d.delayedShipments > 0} ? 'kpi-alert'">
+                <span class="kpi-label">Delayed shipments</span>
+                <span class="kpi-value" th:text="${d.delayedShipments}">0</span>
+            </div>
+                <a class="kpi" th:href="@{/notifications}">
+                <span class="kpi-label">Notifications sent</span>
+                <span class="kpi-value" th:text="${d.notifications}">0</span>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Needs attention</h2><span class="count" th:text="${#lists.size(d.needsAttention)}"></span></div>
+                <table class="table" th:unless="${#lists.isEmpty(d.needsAttention)}">
+                    <thead><tr><th>Order</th><th>Customer</th><th>Status</th><th>Reason</th></tr></thead>
+                    <tbody>
+                    <tr th:each="a : ${d.needsAttention}">
+                        <td><a class="mono strong" th:href="@{/orders/{id}(id=${a.order.id})}" th:text="${a.order.id}"></a></td>
+                        <td><a th:href="@{/customers/{id}(id=${a.customer.id})}" th:text="${a.customer.name}"></a></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${a.order.status})}"></span></td>
+                        <td class="muted" th:text="${a.reason}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="empty" th:if="${#lists.isEmpty(d.needsAttention)}">Nothing needs attention.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Latest notifications</h2><a class="link" th:href="@{/notifications}">View all</a></div>
+                <ul class="feed" th:unless="${#lists.isEmpty(d.latestNotifications)}">
+                    <li th:each="row : ${d.latestNotifications}">
+                        <div class="feed-meta">
+                            <span th:replace="~{fragments/layout :: badge(${row.notification.channel})}"></span>
+                            <a th:if="${row.customer != null}" th:href="@{/customers/{id}(id=${row.customer.id})}" th:text="${row.customer.name}"></a>
+                            <span th:if="${row.customer == null}" class="muted">Unknown customer</span>
+                            <time class="muted" th:text="${#temporals.format(row.notification.sentAt, 'd MMM, HH:mm')}"></time>
+                        </div>
+                        <p class="feed-text" th:text="${row.notification.message}"></p>
+                    </li>
+                </ul>
+                <p class="empty" th:if="${#lists.isEmpty(d.latestNotifications)}">
+                    No notifications yet. They appear here when the agent calls <code>inform-customer</code>.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+</body>
+</html>

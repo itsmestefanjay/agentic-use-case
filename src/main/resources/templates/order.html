@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${order.id})}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('orders')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar(${order.id}, ${order.status.description()})}"></header>
+        <section class="content">
+            <a class="back" th:href="@{/orders}">← All orders</a>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-head"><h2>Order</h2><span th:replace="~{fragments/layout :: badge(${order.status})}"></span></div>
+                    <dl class="facts">
+                        <div><dt>Ordered</dt><dd th:text="${#temporals.format(order.orderDate, 'd MMMM yyyy')}"></dd></div>
+                        <div><dt>Last update</dt><dd th:text="${#temporals.format(order.statusUpdatedAt, 'd MMM yyyy, HH:mm')}"></dd></div>
+                        <div><dt>Total</dt><dd class="strong" th:text="|${#numbers.formatDecimal(order.total, 1, 'COMMA', 2, 'POINT')} ${order.currency}|"></dd></div>
+                        <div><dt>Ship to</dt><dd th:text="|${order.shippingCity}, ${order.shippingCountry}|"></dd></div>
+                    </dl>
+                </div>
+                <div class="card" th:if="${customer != null}">
+                    <div class="card-head"><h2>Customer</h2><span th:replace="~{fragments/layout :: badge(${customer.tier})}"></span></div>
+                    <dl class="facts">
+                        <div><dt>Name</dt><dd><a class="strong" th:href="@{/customers/{id}(id=${customer.id})}" th:text="${customer.name}"></a></dd></div>
+                        <div><dt>Customer id</dt><dd class="mono" th:text="${customer.id}"></dd></div>
+                        <div><dt>Email</dt><dd th:text="${customer.email}"></dd></div>
+                        <div><dt>Phone</dt><dd th:text="${customer.phone}"></dd></div>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Items</h2><span class="count" th:text="${#lists.size(order.items)}"></span></div>
+                <table class="table">
+                    <thead><tr><th>Item</th><th>SKU</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Line total</th></tr></thead>
+                    <tbody>
+                    <tr th:each="item : ${order.items}">
+                        <td class="strong" th:text="${item.name}"></td>
+                        <td class="mono muted" th:text="${item.sku}"></td>
+                        <td class="num" th:text="${item.quantity}"></td>
+                        <td class="num" th:text="${#numbers.formatDecimal(item.unitPrice, 1, 'COMMA', 2, 'POINT')}"></td>
+                        <td class="num" th:text="${#numbers.formatDecimal(item.lineTotal(), 1, 'COMMA', 2, 'POINT')}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="card-head"><h2>Shipment</h2><span th:replace="~{fragments/layout :: badge(${tracking.trackingStatus})}"></span></div>
+                <p class="muted" th:text="${tracking.message}"></p>
+                <th:block th:if="${shipment != null}">
+                    <dl class="facts">
+                        <div><dt>Carrier</dt><dd th:text="${shipment.carrier.displayName()}"></dd></div>
+                        <div><dt>Tracking number</dt><dd><a class="mono" th:href="${shipment.trackingUrl()}" target="_blank" rel="noopener" th:text="${shipment.trackingNumber}"></a></dd></div>
+                        <div><dt>Shipped</dt><dd th:text="${#temporals.format(shipment.shippedAt, 'd MMM yyyy, HH:mm')}"></dd></div>
+                        <div th:if="${shipment.delivered}"><dt>Delivered</dt><dd th:text="${#temporals.format(shipment.deliveredAt, 'd MMM yyyy, HH:mm')}"></dd></div>
+                        <div th:unless="${shipment.delivered}"><dt>Estimated delivery</dt><dd th:text="${#temporals.format(shipment.estimatedDelivery, 'd MMM yyyy, HH:mm')}"></dd></div>
+                    </dl>
+                    <ol class="timeline">
+                        <li th:each="event : ${shipment.eventsNewestFirst()}">
+                            <span class="dot"></span>
+                            <div>
+                                <div class="strong" th:text="${event.description}"></div>
+                                <div class="muted small" th:text="|${event.location} · ${#temporals.format(event.occurredAt, 'd MMM yyyy, HH:mm')}|"></div>
+                            </div>
+                        </li>
+                    </ol>
+                </th:block>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+</body>
+</html>

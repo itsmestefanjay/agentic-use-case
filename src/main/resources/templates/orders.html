@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Orders')}"></head>
+<body>
+<div class="app">
+    <aside th:replace="~{fragments/layout :: sidebar('orders')}"></aside>
+    <main>
+        <header th:replace="~{fragments/layout :: topbar('Orders', ${total} + ' orders')}"></header>
+        <section class="content">
+            <nav class="chips">
+                <a th:href="@{/orders}" class="chip" th:classappend="${status == null} ? 'active'">All <span th:text="${total}"></span></a>
+                <a th:each="s : ${statuses}" th:if="${counts.containsKey(s)}" th:href="@{/orders(status=${s})}"
+                   class="chip" th:classappend="${status == s} ? 'active'">
+                    <span th:text="${#strings.replace(s.name(), '_', ' ')}"></span> <span th:text="${counts.get(s)}"></span></a>
+            </nav>
+            <div class="card">
+                <table class="table" th:unless="${#lists.isEmpty(orders)}">
+                    <thead><tr><th>Order</th><th>Customer</th><th>Ordered</th><th>Status</th><th>Ship to</th><th class="num">Total</th><th>Last update</th></tr></thead>
+                    <tbody>
+                    <tr th:each="row : ${orders}" class="clickable" th:attr="data-href=@{/orders/{id}(id=${row.order.id})}">
+                        <td><a class="mono strong" th:href="@{/orders/{id}(id=${row.order.id})}" th:text="${row.order.id}"></a></td>
+                        <td><a th:href="@{/customers/{id}(id=${row.customer.id})}" th:text="${row.customer.name}"></a></td>
+                        <td th:text="${#temporals.format(row.order.orderDate, 'd MMM yyyy')}"></td>
+                        <td><span th:replace="~{fragments/layout :: badge(${row.order.status})}"></span></td>
+                        <td class="muted" th:text="|${row.order.shippingCity}, ${row.order.shippingCountry}|"></td>
+                        <td class="num" th:text="|${#numbers.formatDecimal(row.order.total, 1, 'COMMA', 2, 'POINT')} ${row.order.currency}|"></td>
+                        <td class="muted" th:text="${#temporals.format(row.order.statusUpdatedAt, 'd MMM, HH:mm')}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="empty" th:if="${#lists.isEmpty(orders)}">No orders with this status.</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:replace="~{fragments/layout :: shortcuts}"></script>
+<script>
+    document.querySelectorAll('tr.clickable').forEach(row =>
+        row.addEventListener('click', event => { if (!event.target.closest('a')) location.href = row.dataset.href; }));
+</script>
+</body>
+</html>
